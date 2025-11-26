@@ -350,6 +350,19 @@
           ></script>
         </div>
       </div>
+
+      <div class="last-updated">
+        <span class="last-updated-text">LAST UPDATED AT</span>
+        <span class="last-updated-date" id="last-updated-date"></span>
+      </div>
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const lastModified = new Date(document.lastModified);
+        const options = { year: "numeric", month: "long", day: "numeric" };
+        const formattedDate = lastModified.toLocaleDateString("en-US", options);
+        document.getElementById("last-updated-date").textContent = formattedDate;
+      });
+    </script>
   </body>
 </html>

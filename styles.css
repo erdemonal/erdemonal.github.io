@@ -35,4 +35,7 @@ a:not(.badge-group a):not(.social-icons a):hover{background:#e8e8e8}
 .badge-group a:hover{opacity:0.8}
 .badge-group img{height:32px;width:auto;display:block}
 #ecoindex-badge{display:flex;justify-content:center;align-items:center}
-@media (max-width:600px){body{padding:20px 15px}h1{font-size:2rem}.social-icons a{margin-right:15px;font-size:1.1rem}.badges-container{gap:15px;margin-top:25px}}
+.last-updated{text-align:center;margin-top:40px;padding-top:30px;font-family:'Courier New',Courier,monospace;font-size:0.75rem;color:var(--text-secondary);opacity:0.7}
+.last-updated-text{display:block;margin-bottom:4px;letter-spacing:1px}
+.last-updated-date{display:block;font-weight:300}
+@media (max-width:600px){body{padding:20px 15px}h1{font-size:2rem}.social-icons a{margin-right:15px;font-size:1.1rem}.badges-container{gap:15px;margin-top:25px}.last-updated{margin-top:30px;padding-top:20px}}
