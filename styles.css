@@ -6,6 +6,24 @@
   --border: #ccc;
   --bg-light: #f8f8f8;
   --bg-accent: #e6ffe6;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 20px;
+  --spacing-xl: 40px;
+  --spacing-xxl: 50px;
+  --spacing-xxxl: 60px;
+  
+  /* Border radius */
+  --radius-sm: 3px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
 }
 
 * {
@@ -26,8 +44,10 @@ body {
 }
 
 .header {
-  margin-bottom: 60px;
+  margin-bottom: var(--spacing-xxxl);
 }
+
+
 
 h1 {
   font-size: 2rem;
@@ -39,7 +59,7 @@ h1 {
   background: black;
   color: white;
   padding: 2px 6px;
-  border-radius: 6px;
+  border-radius: var(--radius-lg);
   font-size: 2.8rem;
 }
 
@@ -53,13 +73,17 @@ h2 {
 .intro {
   font-size: 1.1rem;
   font-weight: 300;
-  margin-bottom: 40px;
+  margin-bottom: var(--spacing-xl);
   color: var(--text-primary);
   line-height: 1.8;
 }
 
+.intro-spacing {
+  margin-top: var(--spacing-lg);
+}
+
 .section {
-  margin-bottom: 50px;
+  margin-bottom: var(--spacing-xxl);
 }
 
 .filter-buttons {
@@ -68,13 +92,13 @@ h2 {
 
 .filter-button {
   display: inline-block;
-  margin: 0 8px 8px 0;
+  margin: 0 var(--spacing-sm) var(--spacing-sm) 0;
   font-size: 0.85rem;
   padding: 6px 10px;
   border: 1px solid var(--border);
   background: var(--bg-light);
   color: var(--text-primary);
-  border-radius: 6px;
+  border-radius: var(--radius-lg);
   cursor: pointer;
 }
 
@@ -87,7 +111,7 @@ h2 {
   margin-bottom: 25px;
   padding: 0 0 20px 15px;
   border-left: 3px solid var(--border);
-  transition: border-left-color 0.3s ease;
+  transition: border-left-color var(--transition-normal);
 }
 
 .content-item:hover {
@@ -149,6 +173,23 @@ h2 {
   margin-bottom: 0;
 }
 
+.main-nav {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-xxxl);
+  text-align: center;
+}
+
+.main-nav-footer {
+  margin-top: var(--spacing-xxxl);
+  margin-bottom: 0;
+}
+
+
+.main-nav .nav-link {
+  font-size: 0.95rem;
+  padding: 6px 12px;
+}
+
 .social-icons {
   margin-top: 20px;
   text-align: center;
@@ -158,13 +199,13 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
+  margin-right: var(--spacing-lg);
   color: var(--text-secondary);
   text-decoration: none;
   padding: 6px;
   min-width: 24px;
   min-height: 24px;
-  border-radius: 6px;
+  border-radius: var(--radius-lg);
   background: none;
   font-style: normal;
 }
@@ -198,24 +239,39 @@ button:focus-visible {
   position: static;
   width: auto;
   height: auto;
-  padding: 8px 12px;
+  padding: var(--spacing-sm) 12px;
   background: #1a73e8;
   color: white;
-  border-radius: 6px;
+  border-radius: var(--radius-lg);
 }
 
-a:not(.badge-group a):not(.social-icons a) {
+.intro a {
   color: var(--text-primary);
   text-decoration: none;
   cursor: pointer;
   font-style: italic;
   background: #f5f5f5;
-  padding: 2px 4px;
-  border-radius: 3px;
-  transition: background 0.2s ease;
+  padding: 2px var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
 }
 
-a:not(.badge-group a):not(.social-icons a):hover {
+.intro a:hover {
+  background: #e8e8e8;
+}
+
+.content-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  cursor: pointer;
+  font-style: italic;
+  background: #f5f5f5;
+  padding: 2px var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.content-link:hover {
   background: #e8e8e8;
 }
 
@@ -236,7 +292,7 @@ a:not(.badge-group a):not(.social-icons a):hover {
 }
 
 .badge-group a {
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-normal);
   display: block;
   background: none;
   padding: 0;
@@ -261,9 +317,13 @@ a:not(.badge-group a):not(.social-icons a):hover {
   align-items: center;
 }
 
+.monospace {
+  font-family: "Courier New", Courier, monospace;
+}
+
 .last-updated {
   text-align: center;
-  margin-top: 40px;
+  margin-top: var(--spacing-xl);
   padding-top: 30px;
   font-family: "Courier New", Courier, monospace;
   font-size: 0.75rem;
@@ -280,6 +340,38 @@ a:not(.badge-group a):not(.social-icons a):hover {
 .last-updated-date {
   display: block;
   font-weight: 300;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-light);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: background var(--transition-fast);
+  font-style: normal;
+}
+
+.nav-link:hover {
+  background: #e8e8e8;
+}
+
+.commentarii-description {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+  margin-top: -15px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.commentarii-section {
+  margin-top: -40px;
+}
+
+.commentarii-section .commentarii-description {
+  margin-top: 0;
 }
 
 @media (max-width: 600px) {

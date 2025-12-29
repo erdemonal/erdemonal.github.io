@@ -126,6 +126,9 @@
           </svg>
         </a>
       </div>
+      <nav class="main-nav">
+        <a href="notes.html" class="nav-link">Commentarii</a>
+      </nav>
     </header>
 
     <main id="main">
@@ -161,6 +164,7 @@
               href="https://github.com/erdemonal/SemanticGAN"
               target="_blank"
               rel="noopener noreferrer"
+              class="content-link"
               >Project Repository</a
             >
           </div>
@@ -182,6 +186,7 @@
               href="files/systematic-mapping-green-load-balancing.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              class="content-link"
               >View PDF</a
             >
           </div>
@@ -203,6 +208,7 @@
               href="files/safety-critical-medical-cps.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              class="content-link"
               >View PDF</a
             >
           </div>
@@ -221,203 +227,9 @@
               href="files/data-interoperability-semantics.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              class="content-link"
               >View PDF</a
             >
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <h2>Notes</h2>
-        <div
-          class="filter-buttons"
-          aria-label="Filter notes by category"
-          role="group"
-        >
-          <button class="filter-button active" data-filter="all">All</button>
-          <button class="filter-button" data-filter="machine-learning">
-            Machine Learning
-          </button>
-          <button class="filter-button" data-filter="iot">IoT</button>
-          <button class="filter-button" data-filter="system-engineering">
-            System Engineering
-          </button>
-          <button class="filter-button" data-filter="data-interoperability">
-            Data Interoperability
-          </button>
-        </div>
-
-        <div class="content-item" data-categories="machine-learning">
-          <div class="note-title">Markov Decision Processes (MDP)</div>
-          <div class="note-content">
-            The formalism for Reinforcement Learning problems consisting of:
-            States (s), Actions (A), Transition Model T(s,a,s') which is the
-            probability Pr(s'|s,a), and Rewards R(s).
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="machine-learning">
-          <div class="note-title">Bias and Variance Tradeoff</div>
-          <div class="note-content">
-            Bias is how well the model hits its target. Variance is how
-            consistent the model is across multiple datasets. Methods to
-            decrease Bias generally increase Variance (no free lunch theorem).
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="machine-learning">
-          <div class="note-title">Ensemble Learning</div>
-          <div class="note-content">
-            One method to decrease Bias. Various types: Bagging Bootstrap
-            (select data) then Aggregate (avg) identical models. Stacking Learn
-            different models to Aggregate with vote/another model. Boosting Use
-            previous errors to improve the (same) model.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="machine-learning">
-          <div class="note-title">Hebbian Learning</div>
-          <div class="note-content">
-            When an axon of cell A is near enough to excite a cell B and
-            repeatedly or persistently takes part in firing it, some growth
-            process or metabolic change takes place in one or both cells such
-            that A's efficiency, as one of the cells firing B, is increased.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="machine-learning">
-          <div class="note-title">Confusion Matrix Definitions</div>
-          <div class="note-content">
-            True positive (TP) correctly indicates positive output. True
-            negative (TN) correctly indicates negative output. False positive
-            (FP) (Type I) wrongly indicates positive output. False negative (FN)
-            (Type II) wrongly indicates negative output.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="iot">
-          <div class="note-title">System on a Chip (SoC)</div>
-          <div class="note-content">
-            A System on a Chip (SoC) is an integrated circuit (IC) that
-            integrates all or most components of a computer or other electronic
-            system. These components almost always include a central processing
-            unit (CPU), memory, input/output ports and secondary storage.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="iot">
-          <div class="note-title">LPWAN</div>
-          <div class="note-content">
-            Low Power Wide Area Network (LPWAN) is a type of wireless
-            telecommunication wide area network designed to allow long range
-            communications at a low bit rate among things (connected objects).
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="iot">
-          <div class="note-title">LoRaWAN</div>
-          <div class="note-content">
-            LoRaWAN is a media access control (MAC) layer protocol for managing
-            communication between LPWAN gateways and end-node devices,
-            maintained by the LoRa Alliance.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="iot">
-          <div class="note-title">Matter Standard</div>
-          <div class="note-content">
-            Matter is a proprietary, royalty-free home automation connectivity
-            standard. It aims to reduce fragmentation across different vendors
-            and achieve interoperability among smart home devices and Internet
-            of things (IoT) platforms from different providers.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="system-engineering">
-          <div class="note-title">Software Requirement</div>
-          <div class="note-content">
-            Software capability needed by a user to solve a problem or to
-            achieve an objective. Software capability that must be met or
-            possessed by a system or system component to satisfy a contract,
-            standard, specification, or other formally imposed document.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="system-engineering">
-          <div class="note-title">Unified Modeling Language (UML)</div>
-          <div class="note-content">
-            The UML is a general-purpose visual modeling language intended to
-            provide a standard way to visualize, specify, construct and document
-            the artifacts of a software-intensive system.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="system-engineering">
-          <div class="note-title">Software Product Quality</div>
-          <div class="note-content">
-            Degree to which the system satisfies the stated and implied needs of
-            its various stakeholders, and thus provides value.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="system-engineering">
-          <div class="note-title">DevOps</div>
-          <div class="note-content">
-            DevOps is a set of practices that combines software development
-            (Dev) and IT operations (Ops). It aims to shorten the systems
-            development life cycle and provide continuous delivery with high
-            software quality.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="system-engineering">
-          <div class="note-title">Scrum Framework</div>
-          <div class="note-content">
-            A Scrum Master fosters an environment where: 1. A Product Owner
-            orders the work for a complex problem into a Product Backlog. 2. The
-            Scrum Team turns a selection of the work into an Increment of value
-            during a Sprint. 3. The Scrum Team and its stakeholders inspect the
-            results and adjust for the next Sprint. 4. Repeat.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="data-interoperability">
-          <div class="note-title">Semantic Data Interoperability</div>
-          <div class="note-content">
-            Interoperability so that the meaning of the data model within the
-            context of a subject area is understood by the participating
-            systems.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="data-interoperability">
-          <div class="note-title">FAIR Principles</div>
-          <div class="note-content">
-            The FAIR principles emphasize machine-actionability (i.e., the
-            capacity of computational systems to find, access, interoperate, and
-            reuse data with none or minimal human intervention) because humans
-            increasingly rely on computational support to deal with data as a
-            result of the increase in volume, complexity, and creation speed of
-            data.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="data-interoperability">
-          <div class="note-title">Common European Data Spaces</div>
-          <div class="note-content">
-            Purpose or sector-specific or cross-sectoral interoperable
-            frameworks for common standards and practices to share or jointly
-            process data for, inter alia, the development of new products and
-            services, scientific research or civil society initiatives.
-          </div>
-        </div>
-
-        <div class="content-item" data-categories="data-interoperability">
-          <div class="note-title">Controlled Vocabularies</div>
-          <div class="note-content">
-            Vocabulary for which the entries, i.e. definition/term pairs, are
-            controlled by a Source Authority based on a rulebase and process for
-            addition/deletion of entries.
           </div>
         </div>
       </div>
@@ -460,47 +272,6 @@
       </div>
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          const buttons = document.querySelectorAll(".filter-button");
-          const notes = document.querySelectorAll(".content-item");
-
-          function setActive(button) {
-            buttons.forEach((b) => b.classList.remove("active"));
-            button.classList.add("active");
-          }
-
-          function filterNotes(category) {
-            notes.forEach((note) => {
-              const categories = (
-                note.getAttribute("data-categories") || ""
-              ).split(",");
-              const normalized = categories.map((c) => c.trim());
-              note.style.display =
-                category === "all" || normalized.includes(category)
-                  ? ""
-                  : "none";
-            });
-          }
-
-          buttons.forEach((btn) => {
-            btn.setAttribute(
-              "aria-pressed",
-              btn.classList.contains("active") ? "true" : "false"
-            );
-            btn.addEventListener("click", () => {
-              setActive(btn);
-              buttons.forEach((b) =>
-                b.setAttribute("aria-pressed", b === btn ? "true" : "false")
-              );
-              filterNotes(btn.getAttribute("data-filter"));
-            });
-            btn.addEventListener("keydown", (e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                btn.click();
-              }
-            });
-          });
-
           const lastModified = new Date(document.lastModified);
           const options = { year: "numeric", month: "long", day: "numeric" };
           const formattedDate = lastModified.toLocaleDateString(
