@@ -7,6 +7,7 @@
   --bg-light: #f8f8f8;
   --bg-accent: #e6ffe6;
   
+  /* Spacing */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -15,10 +16,12 @@
   --spacing-xxl: 50px;
   --spacing-xxxl: 60px;
   
+  /* Border radius */
   --radius-sm: 3px;
   --radius-md: 4px;
   --radius-lg: 6px;
   
+  /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
 }
@@ -184,7 +187,7 @@ h2 {
 
 .main-nav .nav-link {
   font-size: 0.95rem;
-  padding: 2px var(--spacing-xs);
+  padding: 6px 12px;
 }
 
 .social-icons {
@@ -215,17 +218,6 @@ h2 {
 
 .social-icons a:hover {
   opacity: 0.7;
-}
-
-.commentarii-under-icons {
-  margin-top: var(--spacing-sm);
-  text-align: center;
-}
-
-.commentarii-under-icons a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-style: normal;
 }
 
 a:focus-visible,
