@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Commentarii - Knowledge notes on Machine Learning, IoT, System Engineering, and Data Interoperability."
+      content="Compendium - Knowledge notes on Machine Learning, IoT, System Engineering, and Data Interoperability."
     />
-    <title>Commentarii</title>
+    <title>Compendium</title>
     <link rel="icon" type="image/png" href="images/icon.webp" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
     <header class="header">
-      <h1>Commentarii</h1>
+      <h1>Compendium</h1>
     </header>
 
     <main id="main">
-      <div class="section commentarii-section">
-        <p class="commentarii-description">
-          Commentarii (Latin, Greek: hupomnemata) are notes to assist the memory, or memoranda. This original idea of the word gave rise to a variety of meanings: notes and abstracts of speeches for the assistance of orators; family memorials, the origin of many of the legends introduced into early Roman history from a desire to glorify a particular family; and diaries of events occurring in their own circle kept by private individuals.
-        </p>
+      <div class="section compendium-section">
+        <p class="compendium-description">
+          A compendium (pl. compendia or compendiums) is a comprehensive collection of information and analysis pertaining to a body of knowledge. A compendium may concisely summarize a larger work. In most cases, the body of knowledge will concern a specific field of human interest or endeavor (for example: hydrogeology, logology, ichthyology, phytosociology or myrmecology), while a general encyclopedia can be referred to as a "compendium of all human knowledge".        </p>
+        
         <div
           class="filter-buttons"
           aria-label="Filter notes by category"
@@ -240,17 +240,50 @@
             });
           }
 
+          function updateURL(filter) {
+            const url = new URL(window.location);
+            if (filter === "all") {
+              url.searchParams.delete("filter");
+            } else {
+              url.searchParams.set("filter", filter);
+            }
+            window.history.pushState({ filter: filter }, "", url);
+          }
+
+          function applyFilter(filter) {
+            const button = Array.from(buttons).find(
+              (btn) => btn.getAttribute("data-filter") === filter
+            );
+            if (button) {
+              setActive(button);
+              buttons.forEach((b) =>
+                b.setAttribute("aria-pressed", b === button ? "true" : "false")
+              );
+              filterNotes(filter);
+            }
+          }
+
+          const urlParams = new URLSearchParams(window.location.search);
+          const filterParam = urlParams.get("filter");
+          if (filterParam) {
+            applyFilter(filterParam);
+          }
+
+          window.addEventListener("popstate", function (e) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const filterParam = urlParams.get("filter") || "all";
+            applyFilter(filterParam);
+          });
+
           buttons.forEach((btn) => {
             btn.setAttribute(
               "aria-pressed",
               btn.classList.contains("active") ? "true" : "false"
             );
             btn.addEventListener("click", () => {
-              setActive(btn);
-              buttons.forEach((b) =>
-                b.setAttribute("aria-pressed", b === btn ? "true" : "false")
-              );
-              filterNotes(btn.getAttribute("data-filter"));
+              const filter = btn.getAttribute("data-filter");
+              applyFilter(filter);
+              updateURL(filter);
             });
             btn.addEventListener("keydown", (e) => {
               if (e.key === "Enter" || e.key === " ") {
@@ -264,4 +297,3 @@
     </main>
   </body>
 </html>
-

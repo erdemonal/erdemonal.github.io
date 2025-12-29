@@ -115,7 +115,8 @@ h2 {
   border-left-color: var(--accent);
 }
 
-.project-title {
+.project-title,
+.research-title {
   font-weight: 400;
   margin-bottom: 8px;
 }
@@ -215,6 +216,17 @@ h2 {
 
 .social-icons a:hover {
   opacity: 0.7;
+}
+
+.compendium-under-icons {
+  margin-top: var(--spacing-sm);
+  text-align: center;
+}
+
+.compendium-under-icons a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-style: normal;
 }
 
 a:focus-visible,
@@ -354,7 +366,7 @@ button:focus-visible {
   background: #e8e8e8;
 }
 
-.commentarii-description {
+.compendium-description {
   font-family: "Courier New", Courier, monospace;
   font-size: 0.75rem;
   color: var(--text-secondary);
@@ -363,11 +375,11 @@ button:focus-visible {
   margin-bottom: var(--spacing-lg);
 }
 
-.commentarii-section {
+.compendium-section {
   margin-top: -40px;
 }
 
-.commentarii-section .commentarii-description {
+.compendium-section .compendium-description {
   margin-top: 0;
 }
 
