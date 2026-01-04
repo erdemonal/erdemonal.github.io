@@ -1,660 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erdem Onal - Software Engineer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        nav {
-            background-color: #333;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 1rem 1.5rem;
-            display: block;
-            transition: background-color 0.3s;
-            cursor: pointer;
-        }
-
-        nav a:hover {
-            background-color: #667eea;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-
-        section {
-            background-color: white;
-            margin-bottom: 2rem;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #667eea;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 0.5rem;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .about-text p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-
-        .about-image {
-            text-align: center;
-        }
-
-        .about-image img {
-            max-width: 300px;
-            border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background-color: #f9f9f9;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-        }
-
-        .skill-category h3 {
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        .skill-category ul {
-            list-style: none;
-        }
-
-        .skill-category li {
-            padding: 0.5rem 0;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .skill-category li:before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .portfolio-item {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-        }
-
-        .portfolio-image {
-            width: 100%;
-            height: 200px;
-            background-color: #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 1.2rem;
-        }
-
-        .portfolio-content {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .portfolio-content h3 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
-        }
-
-        .portfolio-content p {
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            flex-grow: 1;
-        }
-
-        .portfolio-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .tech-tag {
-            background-color: #e8eaf6;
-            color: #667eea;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-        }
-
-        .portfolio-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .portfolio-links a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .portfolio-links a:hover {
-            color: #764ba2;
-        }
-
-        .experience-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #eee;
-        }
-
-        .experience-item:last-child {
-            border-bottom: none;
-        }
-
-        .experience-item h3 {
-            color: #667eea;
-            margin-bottom: 0.3rem;
-        }
-
-        .experience-item .company {
-            color: #666;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-item .duration {
-            color: #999;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .experience-item ul {
-            list-style: none;
-            padding-left: 1.5rem;
-        }
-
-        .experience-item li {
-            padding: 0.3rem 0;
-            position: relative;
-            padding-left: 1rem;
-        }
-
-        .experience-item li:before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-        }
-
-        .contact-form {
-            max-width: 600px;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #333;
-            font-weight: bold;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        input:focus,
-        textarea:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
-        }
-
-        button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-
-        .social-links {
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #667eea;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                padding: 0;
-            }
-
-            nav a {
-                padding: 0.8rem 1.5rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-            section {
-                padding: 1.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <h1>Erdem Onal</h1>
-            <p class="subtitle">Software Engineer | Full-Stack Developer</p>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Erdem Önal - MSc student in CPS2: AI and IoT at Université Jean Monnet & Mines Saint-Étienne."
+    />
+    <title>Erdem Önal</title>
+    <link rel="icon" type="image/png" href="images/icon.webp" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "uwcjdxtypf");
+    </script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header class="header">
+      <h1><span class="name-badge">Erdem Önal</span></h1>
+      <div class="intro">
+        I am a first year MSc student in
+        <a
+          href="https://www.mines-stetienne.fr/formation/cyber-physical-social-systems-cps2/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Cyber-Physical and Social Systems: Artificial Intelligence and
+          Internet of Things (CPS2: AI and IoT).</a
+        >
+        <br/>
+        <br/>
+        CPS2: AI and IoT is the international track of the Master in Computer
+        Science at Université de Lyon, jointly operated by Université Jean
+        Monnet Saint-Étienne and Mines Saint-Étienne (Institut Mines-Télécom).
+      </div>
+      <div class="social-icons">
+        <a
+          href="mailto:erdemonal@outlook.fr"
+          aria-label="Email Erdem via Outlook"
+          title="Send email to erdemonal@outlook.fr"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 512 512"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://linkedin.com/in/e-onal"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn profile (opens in new tab)"
+          title="LinkedIn profile"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 448 512"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://github.com/erdemonal"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub profile (opens in new tab)"
+          title="GitHub profile"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 496 512"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 22.6-58.9-2.6-6.5-11.1-32.5 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 35.4 5.2 61.4 2.6 67.9 15 17.7 22.6 31.4 22.6 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://orcid.org/0009-0006-6580-3711"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="ORCID profile (opens in new tab)"
+          title="ORCID profile"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"
+            />
+          </svg>
+        </a>
+        <a
+          href="files/cv-erdem-onal.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Curriculum Vitae PDF (opens in new tab)"
+          title="Curriculum Vitae (PDF)"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 384 512"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm48 112a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm48 64c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16h128c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80z"
+            />
+          </svg>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="notes.html" class="nav-link">Compendium</a>
+      </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a onclick="showSection('about')">About</a></li>
-            <li><a onclick="showSection('skills')">Skills</a></li>
-            <li><a onclick="showSection('experience')">Experience</a></li>
-            <li><a onclick="showSection('portfolio')">Portfolio</a></li>
-            <li><a onclick="showSection('contact')">Contact</a></li>
-        </ul>
-    </nav>
+    <main id="main">
+      <div class="section">
+        <h2>Research Interests</h2>
+        <figure class="research-interests">
+          <img
+            src="images/research_interests.webp"
+            alt="Concept map showing relationships between Knowledge Representation, Cyber-Physical Systems, Multi-agent Systems, and Safety Critical Systems."
+            title="Research Interests Concept Map: Knowledge Representation, Cyber-Physical Systems, Multi-agent Systems, and Safety Critical Systems"
+            class="research-interests-image"
+            loading="lazy"
+          />
+          <figcaption class="research-interests-caption">
+            My research interests represented as a concept map
+          </figcaption>
+        </figure>
+      </div>
 
-    <div class="container">
-        <!-- About Section -->
-        <section id="about" class="content-section">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Hello! I'm a passionate software engineer with a strong background in full-stack development. 
-                        With over 5 years of experience, I've worked on diverse projects ranging from web applications 
-                        to cloud infrastructure.
-                    </p>
-                    <p>
-                        I'm committed to writing clean, maintainable code and staying updated with the latest 
-                        technologies. I love solving complex problems and contributing to open-source projects.
-                    </p>
-                    <p>
-                        When I'm not coding, you can find me exploring new technologies, writing technical articles, 
-                        or contributing to the developer community.
-                    </p>
-                </div>
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/300" alt="Profile Picture">
-                </div>
-            </div>
-        </section>
+      <div class="section">
+        <h2>Research & Projects</h2>
 
-        <!-- Skills Section -->
-        <section id="skills" class="content-section hidden">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <ul>
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>React</li>
-                        <li>Vue.js</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>Express.js</li>
-                        <li>RESTful APIs</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <ul>
-                        <li>PostgreSQL</li>
-                        <li>MongoDB</li>
-                        <li>Redis</li>
-                        <li>Firebase</li>
-                        <li>SQL Optimization</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>DevOps & Tools</h3>
-                    <ul>
-                        <li>Docker</li>
-                        <li>Kubernetes</li>
-                        <li>CI/CD Pipelines</li>
-                        <li>Git</li>
-                        <li>AWS & Azure</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="content-section hidden">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Senior Software Engineer</h3>
-                <p class="company">Tech Company Inc.</p>
-                <p class="duration">Jan 2021 - Present</p>
-                <ul>
-                    <li>Led development of microservices architecture serving 1M+ users</li>
-                    <li>Improved application performance by 40% through optimization</li>
-                    <li>Mentored junior developers and conducted code reviews</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Software Engineer</h3>
-                <p class="company">Digital Solutions Ltd.</p>
-                <p class="duration">Jun 2018 - Dec 2020</p>
-                <ul>
-                    <li>Developed full-stack web applications using React and Node.js</li>
-                    <li>Implemented automated testing reducing bugs by 50%</li>
-                    <li>Collaborated with cross-functional teams on product features</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Junior Developer</h3>
-                <p class="company">StartUp Ventures</p>
-                <p class="duration">Jan 2018 - May 2018</p>
-                <ul>
-                    <li>Built responsive user interfaces with HTML, CSS, and JavaScript</li>
-                    <li>Contributed to backend API development</li>
-                    <li>Participated in agile development process</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="content-section hidden">
-            <h2>Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image">Project Image</div>
-                    <div class="portfolio-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, product catalog, shopping cart, and payment integration.</p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                        <div class="portfolio-links">
-                            <a href="#">Live Demo</a>
-                            <a href="#">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">Project Image</div>
-                    <div class="portfolio-content">
-                        <h3>Task Management App</h3>
-                        <p>A collaborative task management application with real-time updates. Built with Vue.js and Firebase, featuring drag-and-drop functionality and team collaboration.</p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="portfolio-links">
-                            <a href="#">Live Demo</a>
-                            <a href="#">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">Project Image</div>
-                    <div class="portfolio-content">
-                        <h3>Analytics Dashboard</h3>
-                        <p>A data visualization dashboard for analytics. Built with React and D3.js, displaying real-time metrics and custom reports for business intelligence.</p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">D3.js</span>
-                            <span class="tech-tag">API</span>
-                        </div>
-                        <div class="portfolio-links">
-                            <a href="#">Live Demo</a>
-                            <a href="#">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="content-section hidden">
-            <h2>Get In Touch</h2>
-            <div class="contact-form">
-                <form id="contactForm" onsubmit="handleSubmit(event)">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Erdem Onal. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
+        <div class="content-item">
+          <div class="research-title">
+            SemanticGAN: Knowledge Graph Completion with Wasserstein GANs
+          </div>
+          <div class="project-description">
+            An experimental research system for knowledge graph completion and
+            RDF triple generation.
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/erdemonal/SemanticGAN"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="content-link"
+              >Project Repository</a
+            >
+          </div>
         </div>
-    </footer>
 
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => {
-                section.classList.add('hidden');
-            });
+        <div class="content-item">
+          <div class="research-title">
+            A Systematic Mapping Study on Green Load Balancing Algorithms for
+            Cloud Data Centers
+          </div>
+          <div class="project-description">
+            A systematic mapping study that reviews published research on load
+            balancing in cloud data centers. The paper classifies existing work
+            and discusses open issues related to energy use and resource
+            allocation.
+          </div>
+          <div class="project-links">
+            <a
+              href="files/systematic-mapping-green-load-balancing.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="content-link"
+              >View PDF</a
+            >
+          </div>
+        </div>
 
-            // Show the selected section
-            const selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.classList.remove('hidden');
-            }
+        <div class="content-item">
+          <div class="research-title">
+            Safety Critical Systems in Medical Cyber-Physical Systems
+          </div>
+          <div class="project-description">
+            A report that studies safety challenges in medical cyber physical
+            systems through a real medical device recall case. The work reviews
+            existing safety approaches and discusses how design time
+            verification, runtime mechanisms, and system architecture can be
+            combined to improve patient safety.
+          </div>
+          <div class="project-links">
+            <a
+              href="files/safety-critical-medical-cps.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="content-link"
+              >View PDF</a
+            >
+          </div>
+        </div>
 
-            // Scroll to top
-            window.scrollTo(0, 0);
-        }
+        <div class="content-item">
+          <div class="research-title">Data Interoperability and Semantics</div>
+          <div class="project-description">
+            A report that examines data interoperability issues in Sweden’s
+            national open data portal using parliamentary and public datasets.
+            The work analyzes the use of metadata standards and shows how
+            semantic models can be used to align heterogeneous data schemas.
+          </div>
+          <div class="project-links">
+            <a
+              href="files/data-interoperability-semantics.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="content-link"
+              >View PDF</a
+            >
+          </div>
+        </div>
+      </div>
 
-        function handleSubmit(event) {
-            event.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            document.getElementById('contactForm').reset();
-        }
+      <div class="badges-container">
+        <div class="badge-group">
+          <a
+            href="https://www.w3.org/WAI/WCAG2AA-Conformance"
+            title="Explanation of WCAG 2 Level AA conformance"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WCAG 2.2 Level AA conformance (opens in new tab)"
+          >
+            <img
+              height="32"
+              width="88"
+              src="https://www.w3.org/WAI/WCAG22/wcag2.2AA"
+              alt="Level AA conformance, W3C WAI Web Content Accessibility Guidelines 2.2"
+            />
+          </a>
+        </div>
+        <div class="badge-group" aria-live="polite">
+          <div
+            id="ecoindex-badge"
+            data-theme="dark"
+            role="img"
+            aria-label="EcoIndex environmental impact badge"
+            title="EcoIndex Badge - View environmental impact details (opens in new tab)"
+          ></div>
+          <script>
+            (function() {
+              const script = document.createElement('script');
+              script.src = 'https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@3/assets/js/ecoindex-badge.js';
+              script.defer = true;
+              document.body.appendChild(script);
+            })();
+          </script>
+        </div>
+      </div>
 
-        // EcoIndex Badge Script with Page Navigation Support
-        (function() {
-            const ECOINDEX_SCRIPT_ID = 'ecoindex-script';
-            const ECOINDEX_CONTAINER_ID = 'ecoindex-badge';
-
-            function loadEcoIndexBadge() {
-                // Remove old script if it exists
-                const oldScript = document.getElementById(ECOINDEX_SCRIPT_ID);
-                if (oldScript) {
-                    oldScript.remove();
-                }
-
-                // Create new script element
-                const script = document.createElement('script');
-                script.id = ECOINDEX_SCRIPT_ID;
-                script.src = 'https://api.ecoindex.fr/badge.js?url=' + encodeURIComponent(window.location.href);
-                script.async = true;
-
-                // Insert script into document
-                document.body.appendChild(script);
-            }
-
-            // Load badge on initial page load
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', loadEcoIndexBadge);
-            } else {
-                loadEcoIndexBadge();
-            }
-
-            // Reload badge on popstate events (browser back/forward navigation)
-            window.addEventListener('popstate', function() {
-                loadEcoIndexBadge();
-            });
-
-            // Optional: Reload badge when content changes programmatically
-            window.addEventListener('hashchange', function() {
-                loadEcoIndexBadge();
-            });
-        })();
+      <div class="last-updated">
+        <span class="last-updated-text">LAST UPDATED</span>
+        <span class="last-updated-date" id="last-updated-date"></span>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const lastModified = new Date(document.lastModified);
+          const options = { year: "numeric", month: "long", day: "numeric" };
+          const formattedDate = lastModified.toLocaleDateString(
+            "en-US",
+            options
+          );
+          const lastUpdatedEl = document.getElementById("last-updated-date");
+          if (lastUpdatedEl) {
+            lastUpdatedEl.textContent = formattedDate;
+          }
+        });
+      </script>
+    </main>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Erdem Önal",
+        "url": "https://erdemonal.github.io",
+        "jobTitle": "MSc Student",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Université Jean Monnet & Mines Saint-Étienne"
+        },
+        "sameAs": [
+          "https://linkedin.com/in/e-onal",
+          "https://github.com/erdemonal",
+          "https://orcid.org/0009-0006-6580-3711"
+        ]
+      }
     </script>
-</body>
+  </body>
 </html>
