@@ -266,19 +266,45 @@
           </a>
         </div>
         <div class="badge-group" aria-live="polite">
-          <a
-            href="https://bff.ecoindex.fr/redirect/?url=https://erdemonal.github.io/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <div
+            id="ecoindex-badge"
+            data-ecoindex-url="https://erdemonal.github.io/"
+            role="img"
             aria-label="EcoIndex environmental impact badge"
             title="EcoIndex Badge - View environmental impact details (opens in new tab)"
-          >
-            <img
-              src="https://bff.ecoindex.fr/badge/?url=https://erdemonal.github.io/"
-              alt="Ecoindex Badge"
-              style="display: block"
-            />
-          </a>
+          ></div>
+          <script>
+            (function() {
+              function forceBadgeReload() {
+                const badge = document.getElementById('ecoindex-badge');
+                if (!badge) return;
+                
+                badge.innerHTML = '';
+                badge.removeAttribute('data-loaded');
+                
+                document.querySelectorAll('script[src*="ecoindex-badge"]').forEach(s => s.remove());
+                
+                setTimeout(() => {
+                  const newScript = document.createElement('script');
+                  newScript.src = 'https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@3/assets/js/ecoindex-badge.js?' + Date.now();
+                  newScript.defer = true;
+                  document.body.appendChild(newScript);
+                }, 200);
+              }
+              
+              forceBadgeReload();
+              
+              window.addEventListener('pageshow', function(e) {
+                if (e.persisted || (window.performance && window.performance.navigation.type === 2)) {
+                  forceBadgeReload();
+                }
+              });
+              
+              window.addEventListener('focus', function() {
+                forceBadgeReload();
+              });
+            })();
+          </script>
         </div>
       </div>
 
