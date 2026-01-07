@@ -9,22 +9,14 @@
     />
     <title>Erdem Önal</title>
     
-    <!-- Performance Hints -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://www.clarity.ms">
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://erdemonal.github.io/">
     <meta property="og:title" content="Erdem Önal - MSc Student in CPS2: AI and IoT">
-    <meta property="og:description" content="MSc student in Cyber-Physical and Social Systems at Université Jean Monnet & Mines Saint-Étienne">
-    <meta property="og:image" content="https://erdemonal.github.io/images/research_interests.webp">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Erdem Önal">
-    <meta name="twitter:description" content="MSc student in CPS2: AI and IoT">
-    <meta name="twitter:image" content="https://erdemonal.github.io/images/research_interests.webp">
+    <meta property="og:description" content="MSc Computer Science Student at Université Jean Monnet & Mines Saint-Étienne">
+    <meta property="og:image" content="https://erdemonal.github.io/images/research-interests.webp">
 
     <link rel="icon" type="image/png" href="images/icon.webp" />
     <link rel="stylesheet" href="styles.css" />
@@ -157,7 +149,7 @@
           <h2>Research Interests</h2>
           <figure class="research-interests">
             <img
-              src="images/research_interests.webp"
+              src="images/research-interests.webp"
               alt="Concept map showing relationships between Knowledge Representation, Cyber-Physical Systems, Multi-agent Systems, and Safety Critical Systems."
               title="Research Interests Concept Map: Knowledge Representation, Cyber-Physical Systems, Multi-agent Systems, and Safety Critical Systems"
               class="research-interests-image"
@@ -257,11 +249,6 @@
         </div>
 
       </div>
-      <!-- END HOME VIEW -->
-
-
-
-
 
       <div id="compendium-view" style="display: none;">
         <div class="section compendium-header">
@@ -504,7 +491,6 @@
       </footer>
 
       <script>
-        // Immediate execution to prevent FOUC (Flash of Unstyled Content)
         (function() {
           const homeView = document.getElementById('home-view');
           const compendiumView = document.getElementById('compendium-view');
@@ -534,13 +520,11 @@
             if (hash === '#compendium') {
               showCompendium();
             } else if (hash === '#main') {
-               // Do nothing on skip link
             } else {
               showHome();
             }
           }
 
-          // Initialize immediately
           handleHashChange();
           window.addEventListener('hashchange', handleHashChange);
         })();
@@ -589,7 +573,6 @@
           }
           
           buttons.forEach((btn) => {
-            // Set initial state
             if (btn.classList.contains("active")) {
                 btn.setAttribute("aria-pressed", "true");
             } else {
