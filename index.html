@@ -8,22 +8,27 @@
       content="Erdem Önal - MSc student in CPS2: AI and IoT at Université Jean Monnet & Mines Saint-Étienne."
     />
     <title>Erdem Önal</title>
+    
+    <!-- Performance Hints -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://erdemonal.github.io/">
+    <meta property="og:title" content="Erdem Önal - MSc Student in CPS2: AI and IoT">
+    <meta property="og:description" content="MSc student in Cyber-Physical and Social Systems at Université Jean Monnet & Mines Saint-Étienne">
+    <meta property="og:image" content="https://erdemonal.github.io/images/research_interests.webp">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Erdem Önal">
+    <meta name="twitter:description" content="MSc student in CPS2: AI and IoT">
+    <meta name="twitter:image" content="https://erdemonal.github.io/images/research_interests.webp">
+
     <link rel="icon" type="image/png" href="images/icon.webp" />
     <link rel="stylesheet" href="styles.css" />
-    <script type="text/javascript">
-      (function (c, l, a, r, i, t, y) {
-        c[a] =
-          c[a] ||
-          function () {
-            (c[a].q = c[a].q || []).push(arguments);
-          };
-        t = l.createElement(r);
-        t.async = 1;
-        t.src = "https://www.clarity.ms/tag/" + i;
-        y = l.getElementsByTagName(r)[0];
-        y.parentNode.insertBefore(t, y);
-      })(window, document, "clarity", "script", "uwcjdxtypf");
-    </script>
+
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -141,192 +146,465 @@
         </a>
       </div>
       <nav class="main-nav">
-        <a href="compendium.html" class="nav-link">Compendium</a>
+        <a href="#compendium" class="nav-link">Compendium</a>
       </nav>
     </header>
 
-    <main id="main">
-      <div class="section">
-        <h2>Research Interests</h2>
-        <figure class="research-interests">
-          <img
-            src="images/research_interests.webp"
-            alt="Concept map showing relationships between Knowledge Representation, Cyber-Physical Systems, Multi-agent Systems, and Safety Critical Systems."
-            title="Research Interests Concept Map: Knowledge Representation, Cyber-Physical Systems, Multi-agent Systems, and Safety Critical Systems"
-            class="research-interests-image"
-            loading="lazy"
-          />
-          <figcaption class="research-interests-caption">
-            My research interests represented as a concept map
-          </figcaption>
-        </figure>
-      </div>
+    <main id="main" tabindex="-1">
 
-      <div class="section">
-        <h2>Research & Projects</h2>
-
-        <div class="content-item">
-          <div class="research-title">
-            SemanticGAN: Knowledge Graph Completion with Wasserstein GANs
-          </div>
-          <div class="project-description">
-            An experimental research system for knowledge graph completion and
-            RDF triple generation.
-          </div>
-          <div class="project-links">
-            <a
-              href="https://github.com/erdemonal/SemanticGAN"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="content-link"
-              >Project Repository</a
-            >
-          </div>
-        </div>
-
-        <div class="content-item">
-          <div class="research-title">
-            A Systematic Mapping Study on Green Load Balancing Algorithms for
-            Cloud Data Centers
-          </div>
-          <div class="project-description">
-            A systematic mapping study that reviews published research on load
-            balancing in cloud data centers. The paper classifies existing work
-            and discusses open issues related to energy use and resource
-            allocation.
-          </div>
-          <div class="project-links">
-            <a
-              href="files/systematic-mapping-green-load-balancing.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="content-link"
-              >View PDF</a
-            >
-          </div>
-        </div>
-
-        <div class="content-item">
-          <div class="research-title">
-            Safety Critical Systems in Medical Cyber-Physical Systems
-          </div>
-          <div class="project-description">
-            A report that studies safety challenges in medical cyber physical
-            systems through a real medical device recall case. The work reviews
-            existing safety approaches and discusses how design time
-            verification, runtime mechanisms, and system architecture can be
-            combined to improve patient safety.
-          </div>
-          <div class="project-links">
-            <a
-              href="files/safety-critical-medical-cps.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="content-link"
-              >View PDF</a
-            >
-          </div>
-        </div>
-
-        <div class="content-item">
-          <div class="research-title">Data Interoperability and Semantics</div>
-          <div class="project-description">
-            A report that examines data interoperability issues in Sweden’s
-            national open data portal using parliamentary and public datasets.
-            The work analyzes the use of metadata standards and shows how
-            semantic models can be used to align heterogeneous data schemas.
-          </div>
-          <div class="project-links">
-            <a
-              href="files/data-interoperability-semantics.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="content-link"
-              >View PDF</a
-            >
-          </div>
-        </div>
-      </div>
-
-      <div class="badges-container">
-        <div class="badge-group">
-          <a
-            href="https://www.w3.org/WAI/WCAG2AA-Conformance"
-            title="Explanation of WCAG 2 Level AA conformance"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WCAG 2.2 Level AA conformance (opens in new tab)"
-          >
+      <div id="home-view">
+        <div class="section">
+          <h2>Research Interests</h2>
+          <figure class="research-interests">
             <img
-              height="32"
-              width="88"
-              src="https://www.w3.org/WAI/WCAG22/wcag2.2AA"
-              alt="Level AA conformance, W3C WAI Web Content Accessibility Guidelines 2.2"
+              src="images/research_interests.webp"
+              alt="Concept map showing relationships between Knowledge Representation, Cyber-Physical Systems, Multi-agent Systems, and Safety Critical Systems."
+              title="Research Interests Concept Map: Knowledge Representation, Cyber-Physical Systems, Multi-agent Systems, and Safety Critical Systems"
+              class="research-interests-image"
+              loading="eager"
+              fetchpriority="high"
             />
-          </a>
+            <figcaption class="research-interests-caption">
+              My research interests represented as a concept map
+            </figcaption>
+          </figure>
         </div>
-        <div class="badge-group" aria-live="polite">
+
+        <div class="section">
+          <h2>Research & Projects</h2>
+
+          <div class="content-item">
+            <div class="research-title">
+              SemanticGAN: Knowledge Graph Completion with Wasserstein GANs
+            </div>
+            <div class="project-description">
+              An experimental research system for knowledge graph completion and
+              RDF triple generation.
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/erdemonal/SemanticGAN"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="content-link"
+                >Project Repository</a
+              >
+            </div>
+          </div>
+
+          <div class="content-item">
+            <div class="research-title">
+              A Systematic Mapping Study on Green Load Balancing Algorithms for
+              Cloud Data Centers
+            </div>
+            <div class="project-description">
+              A systematic mapping study that reviews published research on load
+              balancing in cloud data centers. The paper classifies existing work
+              and discusses open issues related to energy use and resource
+              allocation.
+            </div>
+            <div class="project-links">
+              <a
+                href="files/systematic-mapping-green-load-balancing.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="content-link"
+                >View PDF</a
+              >
+            </div>
+          </div>
+
+          <div class="content-item">
+            <div class="research-title">
+              Safety Critical Systems in Medical Cyber-Physical Systems
+            </div>
+            <div class="project-description">
+              A report that studies safety challenges in medical cyber physical
+              systems through a real medical device recall case. The work reviews
+              existing safety approaches and discusses how design time
+              verification, runtime mechanisms, and system architecture can be
+              combined to improve patient safety.
+            </div>
+            <div class="project-links">
+              <a
+                href="files/safety-critical-medical-cps.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="content-link"
+                >View PDF</a
+              >
+            </div>
+          </div>
+
+          <div class="content-item">
+            <div class="research-title">Data Interoperability and Semantics</div>
+            <div class="project-description">
+              A report that examines data interoperability issues in Sweden’s
+              national open data portal using parliamentary and public datasets.
+              The work analyzes the use of metadata standards and shows how
+              semantic models can be used to align heterogeneous data schemas.
+            </div>
+            <div class="project-links">
+              <a
+                href="files/data-interoperability-semantics.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="content-link"
+                >View PDF</a
+              >
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- END HOME VIEW -->
+
+
+
+
+
+      <div id="compendium-view" style="display: none;">
+        <div class="section compendium-header">
+           <h2>Compendium</h2>
+        </div>
+        <div class="section compendium-section">
+          <p class="compendium-description">
+            A compendium (pl. compendia or compendiums) is a comprehensive collection of information and analysis pertaining to a body of knowledge. A compendium may concisely summarize a larger work. In most cases, the body of knowledge will concern a specific field of human interest or endeavor (for example: hydrogeology, logology, ichthyology, phytosociology or myrmecology), while a general encyclopedia can be referred to as a "compendium of all human knowledge".        </p>
+          
           <div
-            id="ecoindex-badge"
-            data-ecoindex-url="https://erdemonal.github.io/"
-            role="img"
-            aria-label="EcoIndex environmental impact badge"
-            title="EcoIndex Badge - View environmental impact details (opens in new tab)"
-          ></div>
-          <script>
-            (function() {
-              function forceBadgeReload() {
-                const badge = document.getElementById('ecoindex-badge');
-                if (!badge) return;
-                
-                badge.innerHTML = '';
-                badge.removeAttribute('data-loaded');
-                
-                document.querySelectorAll('script[src*="ecoindex-badge"]').forEach(s => s.remove());
-                
-                setTimeout(() => {
-                  const newScript = document.createElement('script');
-                  newScript.src = 'https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@3/assets/js/ecoindex-badge.js?' + Date.now();
-                  newScript.defer = true;
-                  document.body.appendChild(newScript);
-                }, 200);
-              }
-              
-              forceBadgeReload();
-              
-              window.addEventListener('pageshow', function(e) {
-                if (e.persisted || (window.performance && window.performance.navigation.type === 2)) {
-                  forceBadgeReload();
-                }
-              });
-              
-              window.addEventListener('focus', function() {
-                forceBadgeReload();
-              });
-            })();
-          </script>
+            class="filter-buttons"
+            aria-label="Filter notes by category"
+            role="group"
+          >
+            <button class="filter-button active" data-filter="all">All</button>
+            <button class="filter-button" data-filter="machine-learning">
+              Machine Learning
+            </button>
+            <button class="filter-button" data-filter="iot">IoT</button>
+            <button class="filter-button" data-filter="system-engineering">
+              System Engineering
+            </button>
+            <button class="filter-button" data-filter="data-interoperability">
+              Data Interoperability
+            </button>
+          </div>
+  
+          <div class="content-item" data-categories="machine-learning">
+            <div class="note-title">Markov Decision Processes (MDP)</div>
+            <div class="note-content">
+              The formalism for Reinforcement Learning problems consisting of:
+              States (s), Actions (A), Transition Model T(s,a,s') which is the
+              probability Pr(s'|s,a), and Rewards R(s).
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="machine-learning">
+            <div class="note-title">Bias and Variance Tradeoff</div>
+            <div class="note-content">
+              Bias is how well the model hits its target. Variance is how
+              consistent the model is across multiple datasets. Methods to
+              decrease Bias generally increase Variance (no free lunch theorem).
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="machine-learning">
+            <div class="note-title">Ensemble Learning</div>
+            <div class="note-content">
+              One method to decrease Bias. Various types: Bagging Bootstrap
+              (select data) then Aggregate (avg) identical models. Stacking Learn
+              different models to Aggregate with vote/another model. Boosting Use
+              previous errors to improve the (same) model.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="machine-learning">
+            <div class="note-title">Hebbian Learning</div>
+            <div class="note-content">
+              When an axon of cell A is near enough to excite a cell B and
+              repeatedly or persistently takes part in firing it, some growth
+              process or metabolic change takes place in one or both cells such
+              that A's efficiency, as one of the cells firing B, is increased.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="machine-learning">
+            <div class="note-title">Confusion Matrix Definitions</div>
+            <div class="note-content">
+              True positive (TP) correctly indicates positive output. True
+              negative (TN) correctly indicates negative output. False positive
+              (FP) (Type I) wrongly indicates positive output. False negative (FN)
+              (Type II) wrongly indicates negative output.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="iot">
+            <div class="note-title">System on a Chip (SoC)</div>
+            <div class="note-content">
+              A System on a Chip (SoC) is an integrated circuit (IC) that
+              integrates all or most components of a computer or other electronic
+              system. These components almost always include a central processing
+              unit (CPU), memory, input/output ports and secondary storage.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="iot">
+            <div class="note-title">LPWAN</div>
+            <div class="note-content">
+              Low Power Wide Area Network (LPWAN) is a type of wireless
+              telecommunication wide area network designed to allow long range
+              communications at a low bit rate among things (connected objects).
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="iot">
+            <div class="note-title">LoRaWAN</div>
+            <div class="note-content">
+              LoRaWAN is a media access control (MAC) layer protocol for managing
+              communication between LPWAN gateways and end-node devices,
+              maintained by the LoRa Alliance.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="iot">
+            <div class="note-title">Matter Standard</div>
+            <div class="note-content">
+              Matter is a proprietary, royalty-free home automation connectivity
+              standard. It aims to reduce fragmentation across different vendors
+              and achieve interoperability among smart home devices and Internet
+              of things (IoT) platforms from different providers.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="system-engineering">
+            <div class="note-title">Software Requirement</div>
+            <div class="note-content">
+              Software capability needed by a user to solve a problem or to
+              achieve an objective. Software capability that must be met or
+              possessed by a system or system component to satisfy a contract,
+              standard, specification, or other formally imposed document.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="system-engineering">
+            <div class="note-title">Unified Modeling Language (UML)</div>
+            <div class="note-content">
+              The UML is a general-purpose visual modeling language intended to
+              provide a standard way to visualize, specify, construct and document
+              the artifacts of a software-intensive system.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="system-engineering">
+            <div class="note-title">Software Product Quality</div>
+            <div class="note-content">
+              Degree to which the system satisfies the stated and implied needs of
+              its various stakeholders, and thus provides value.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="system-engineering">
+            <div class="note-title">DevOps</div>
+            <div class="note-content">
+              DevOps is a set of practices that combines software development
+              (Dev) and IT operations (Ops). It aims to shorten the systems
+              development life cycle and provide continuous delivery with high
+              software quality.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="system-engineering">
+            <div class="note-title">Scrum Framework</div>
+            <div class="note-content">
+              A Scrum Master fosters an environment where: 1. A Product Owner
+              orders the work for a complex problem into a Product Backlog. 2. The
+              Scrum Team turns a selection of the work into an Increment of value
+              during a Sprint. 3. The Scrum Team and its stakeholders inspect the
+              results and adjust for the next Sprint. 4. Repeat.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="data-interoperability">
+            <div class="note-title">Semantic Data Interoperability</div>
+            <div class="note-content">
+              Interoperability so that the meaning of the data model within the
+              context of a subject area is understood by the participating
+              systems.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="data-interoperability">
+            <div class="note-title">FAIR Principles</div>
+            <div class="note-content">
+              The FAIR principles emphasize machine-actionability (i.e., the
+              capacity of computational systems to find, access, interoperate, and
+              reuse data with none or minimal human intervention) because humans
+              increasingly rely on computational support to deal with data as a
+              result of the increase in volume, complexity, and creation speed of
+              data.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="data-interoperability">
+            <div class="note-title">Common European Data Spaces</div>
+            <div class="note-content">
+              Purpose or sector-specific or cross-sectoral interoperable
+              frameworks for common standards and practices to share or jointly
+              process data for, inter alia, the development of new products and
+              services, scientific research or civil society initiatives.
+            </div>
+          </div>
+  
+          <div class="content-item" data-categories="data-interoperability">
+            <div class="note-title">Controlled Vocabularies</div>
+            <div class="note-content">
+              Vocabulary for which the entries, i.e. definition/term pairs, are
+              controlled by a Source Authority based on a rulebase and process for
+              addition/deletion of entries.
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="last-updated">
-        <span class="last-updated-text">LAST UPDATED</span>
-        <span class="last-updated-date" id="last-updated-date"></span>
-      </div>
+      </main>
+
+      <footer class="footer">
+        <div class="badges-container">
+          <div class="badge-group">
+            <a
+              href="https://www.w3.org/WAI/WCAG2AA-Conformance"
+              title="Explanation of WCAG 2 Level AA conformance"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WCAG 2.2 Level AA conformance (opens in new tab)"
+            >
+              <img
+                height="32"
+                width="88"
+                src="https://www.w3.org/WAI/WCAG22/wcag2.2AA"
+                alt="Level AA conformance, W3C WAI Web Content Accessibility Guidelines 2.2"
+              />
+            </a>
+          </div>
+          <div class="badge-group" aria-live="polite">
+            <div
+              id="ecoindex-badge"
+              data-ecoindex-url="https://erdemonal.github.io/"
+              role="img"
+              aria-label="EcoIndex environmental impact badge"
+              title="EcoIndex Badge - View environmental impact details (opens in new tab)"
+            ></div>
+            <script src="https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@3/assets/js/ecoindex-badge.js" defer crossorigin="anonymous"></script>
+          </div>
+        </div>
+
+        <div class="last-updated">
+          <span class="last-updated-text">LAST UPDATED</span>
+          <span class="last-updated-date" id="last-updated-date"></span>
+        </div>
+      </footer>
+
       <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const lastModified = new Date(document.lastModified);
-          const options = { year: "numeric", month: "long", day: "numeric" };
-          const formattedDate = lastModified.toLocaleDateString(
-            "en-US",
-            options
-          );
-          const lastUpdatedEl = document.getElementById("last-updated-date");
-          if (lastUpdatedEl) {
-            lastUpdatedEl.textContent = formattedDate;
+        // Immediate execution to prevent FOUC (Flash of Unstyled Content)
+        (function() {
+          const homeView = document.getElementById('home-view');
+          const compendiumView = document.getElementById('compendium-view');
+          const navButton = document.querySelector('.main-nav .nav-link');
+          const viewTitle = document.querySelector('title');
+
+          function showHome() {
+             homeView.style.display = 'block';
+             compendiumView.style.display = 'none';
+             navButton.textContent = 'Compendium';
+             navButton.href = '#compendium';
+             document.title = 'Erdem Önal';
+             viewTitle.textContent = 'Erdem Önal';
           }
+
+          function showCompendium() {
+             homeView.style.display = 'none';
+             compendiumView.style.display = 'block';
+             navButton.textContent = 'Home';
+             navButton.href = '#';
+             document.title = 'Compendium - Erdem Önal';
+             viewTitle.textContent = 'Compendium';
+          }
+
+          function handleHashChange() {
+            const hash = window.location.hash;
+            if (hash === '#compendium') {
+              showCompendium();
+            } else if (hash === '#main') {
+               // Do nothing on skip link
+            } else {
+              showHome();
+            }
+          }
+
+          // Initialize immediately
+          handleHashChange();
+          window.addEventListener('hashchange', handleHashChange);
+        })();
+
+        document.addEventListener("DOMContentLoaded", function () {
+          try {
+            const lastModified = new Date(document.lastModified);
+            if (!isNaN(lastModified.getTime())) {
+                const options = { year: "numeric", month: "long", day: "numeric" };
+                const formattedDate = lastModified.toLocaleDateString(
+                    "en-US",
+                    options
+                );
+                const lastUpdatedEl = document.getElementById("last-updated-date");
+                if (lastUpdatedEl) {
+                    lastUpdatedEl.textContent = formattedDate;
+                }
+            }
+          } catch (e) {
+            console.warn("Date formatting error:", e);
+          }
+          
+          const buttons = document.querySelectorAll("#compendium-view .filter-button");
+          const notes = document.querySelectorAll("#compendium-view .content-item");
+
+          function setActive(button) {
+            buttons.forEach((b) => {
+              b.classList.remove("active");
+              b.setAttribute("aria-pressed", "false");
+            });
+            button.classList.add("active");
+            button.setAttribute("aria-pressed", "true");
+          }
+
+          function filterNotes(category) {
+            notes.forEach((note) => {
+              const categories = (
+                note.getAttribute("data-categories") || ""
+              ).split(",");
+              const normalized = categories.map((c) => c.trim());
+              note.style.display =
+                category === "all" || normalized.includes(category)
+                  ? ""
+                  : "none";
+            });
+          }
+          
+          buttons.forEach((btn) => {
+            // Set initial state
+            if (btn.classList.contains("active")) {
+                btn.setAttribute("aria-pressed", "true");
+            } else {
+                btn.setAttribute("aria-pressed", "false");
+            }
+
+            btn.addEventListener("click", () => {
+              const filter = btn.getAttribute("data-filter");
+              setActive(btn);
+              filterNotes(filter);
+            });
+          });
         });
       </script>
-    </main>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -344,6 +622,20 @@
           "https://orcid.org/0009-0006-6580-3711"
         ]
       }
+    </script>
+    <script>
+      window.addEventListener('load', function() {
+        (function (c, l, a, r, i, t, y) {
+          c[a] = c[a] || function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+          t = l.createElement(r);
+          t.async = 1;
+          t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0];
+          y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "uwcjdxtypf");
+      });
     </script>
   </body>
 </html>
