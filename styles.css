@@ -91,7 +91,7 @@ a:hover {
 }
 .header { margin-bottom: 60px; }
 .main-nav { margin-top: 30px; margin-bottom: 60px; text-align: center; }
-.nav-link { font-size: 1.2rem; border-bottom: 1px dotted #999; } 
+.nav-link { font-size: 1.2rem; } 
 
 .social-icons { margin-top: 25px; text-align: center; }
 .social-list { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
