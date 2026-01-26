@@ -1,4 +1,3 @@
-/* Minimal Academic Theme */
 body {
     font-family: Georgia, "Times New Roman", serif;
     background: white;
@@ -9,14 +8,12 @@ body {
     padding: 40px 20px;
 }
 
-/* Typography */
 h1 {
     font-size: 2rem;
     font-weight: 400;
     margin: 20px 0;
 }
 
-/* Bigger Name */
 .name-badge {
     font-size: 3rem; 
     font-weight: 400;
@@ -34,27 +31,24 @@ h2 {
     color: #222;
 }
 
-/* Fixed Intro Typography */
 .intro {
-    font-size: 1.2rem; /* Slightly larger base size */
-    font-weight: 400; /* Regular weight instead of 300 thinness */
+    font-size: 1.2rem; 
+    font-weight: 400; 
     margin-bottom: 40px;
-    line-height: 1.7; /* Tighter line height helps cohesion */
-    color: #333; /* Darker for better visibility */
+    line-height: 1.7; 
+    color: #333; 
 }
 
-/* Make link font match intro size better */
 .intro a {
-    font-size: 0.9em; /* Courier is naturally wide, keep it contained */
-    font-weight: 600; /* Bolder links to stand out less 'thin' */
+    font-size: 0.9em; 
+    font-weight: 600; 
 }
 
-p { margin-bottom: 1.2em; } /* Consistent spacing between paragraphs */
+p { margin-bottom: 1.2em; } 
 
-/* Links - Global */
 a {
     font-family: "Courier New", Courier, monospace;
-    font-size: 0.9em; /* Global adjustment */
+    font-size: 0.9em; 
     color: #666; 
     text-decoration: none;
     border-bottom: 1px dotted #bbb; 
@@ -66,49 +60,42 @@ a:hover {
     border-bottom: 1px dotted #bbb; 
 }
 
-/* Specific Link overrides */
 .social-text-link, .nav-link, .intro a, .content-link {
     background: none;
     border-bottom: none;
 }
 
 .social-text-link:hover, .nav-link:hover, .content-link:hover {
-    text-shadow: 0 0 .65px #333, 0 0 .65px #333; /* Fake bold that doesn't shift layout */
-    font-weight: normal; /* Force stay normal */
+    text-shadow: 0 0 .65px #333, 0 0 .65px #333; 
+    font-weight: normal; 
     border-bottom: none;
 }
 
-/* Permalinks */
 .semantic-id-link, .semantic-id-link-small {
     font-size: 0.75rem;
-    color: #555; /* Darker, more visible grey */
+    color: #555; 
     margin-left: 10px;
     vertical-align: middle;
-    opacity: 0.8; /* Higher visibility */
+    opacity: 0.8; 
     border-bottom: none!important;
-    font-weight: bold; /* Make it pop */
+    font-weight: bold;  
     font-family: 'Courier New', monospace;
     transition: all 0.2s ease;
 }
 
 .semantic-id-link:hover, .semantic-id-link-small:hover {
     opacity: 1;
-    color: #0056b3; /* Explicit Blue on hover */
+    color: #0056b3; 
     text-decoration: underline;
     border-bottom: none!important;
 }
-
-/* Layout */
 .header { margin-bottom: 60px; }
 .main-nav { margin-top: 30px; margin-bottom: 60px; text-align: center; }
 .nav-link { font-size: 1.2rem; border-bottom: 1px dotted #999; } 
 
-/* Social Links */
 .social-icons { margin-top: 25px; text-align: center; }
 .social-list { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 .semantic-id-label { display: block; text-align: center; margin-bottom: 10px; }
-
-/* Content Items */
 .content-item {
     margin-bottom: 45px;
     padding: 0 0 20px 20px;
@@ -120,7 +107,6 @@ a:hover {
 .project-title, .note-title { font-weight: 500; margin-bottom: 5px; color: #222; }
 .project-description, .note-content { font-size: 0.95rem; color: #666; margin-bottom: 10px; }
 
-/* Filters */
 .filter-buttons { margin-bottom: 15px; }
 .filter-button {
     font-family: "Courier New", Courier, monospace;
@@ -136,7 +122,6 @@ a:hover {
 }
 .filter-button.active { background: #eee; border-color: #ccc; color: #333; }
 
-/* Footer */
 .footer { margin-top: 80px; text-align: center; }
 .badges-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 .badge-group a { border-bottom: none!important; opacity: 0.7; }
@@ -150,7 +135,6 @@ a:hover {
     color: #999;
 }
 
-/* Compendium */
 .compendium-description {
     font-family: "Courier New", Courier, monospace;
     font-size: 0.8rem;

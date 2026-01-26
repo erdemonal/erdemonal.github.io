@@ -17,7 +17,8 @@
     <title>Erdem Önal</title>
     
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="" />
-
+    
+    <script data-goatcounter="https://erdemonal.goatcounter.com/count" async="async" src="//gc.zgo.at/count.js"></script>
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://erdemonal.github.io/" />
@@ -31,14 +32,11 @@
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
     
-    <!-- Breadcrumb Navigation (Hidden by default) -->
     <div id="breadcrumb-nav" style="display:none; margin-bottom: 20px; font-family: 'Courier New', monospace;">
         <a href="#" onclick="navigateTo('home'); return false;" style="text-decoration: none;">&#171; Home</a>
     </div>
 
-    <!-- Main Content Wrapper -->
     <div id="main-wrapper">
-        <!-- Entity 0001: Person -->
         <header class="header" id="0001">
             <h1>
                 <span class="name-badge"><xsl:value-of select="entity[@id='0001']/foaf:name"/></span>
@@ -176,10 +174,8 @@
         </footer>
     </div>
 
-    <!-- App Logic -->
     <script>
       <![CDATA[
-      // Disable native scroll restoration to prevent fighting
       if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
 
       function checkRoute() {
@@ -192,7 +188,6 @@
           const compView = document.getElementById('compendium-view');
           const navBtn = document.getElementById('nav-btn');
           
-          // 1. GLOBAL RESET
           header.style.display = 'block';
           footer.style.display = 'block';
           main.style.display = 'block';
@@ -200,7 +195,6 @@
           homeView.style.display = 'none';
           compView.style.display = 'none';
           
-          // Reset Hidden Elements
           const allHidden = document.querySelectorAll('[style*="display: none"]');
           allHidden.forEach(el => {
               if (el !== homeView && el !== compView && el !== breadcrumb && el.id !== 'compendium-view' && el.id !== 'home-view') {
@@ -221,9 +215,6 @@
 
           const target = document.getElementById(hash);
           
-          // 2. Main View Logic
-          // Check if we need to show Compendium Container
-          // If hash is 'compendium', '0005', or any child of compendium-view
           let showCompendium = (hash === 'compendium' || hash === '0005');
           if (target && compView.contains(target)) {
                showCompendium = true;
@@ -250,50 +241,34 @@
               }
           }
 
-          // 3. Isolation Logic
-          
           if (hash) {
-               // Cases:
-               // 1. compendium (Tab) -> Header Visible
-               // 2. 0005 (Permalink) -> Header HIDDEN (Isolated), but Compendium Content VISIBLE
-               // 3. n-xxx (Deep Link) -> Isolated Item
-               // 4. 0004 (Section) -> Isolated Section
                
                if (hash === 'compendium') {
-                   // Normal Tab View
                    header.style.display = 'block';
                    footer.style.display = 'block';
                    breadcrumb.style.display = 'none';
                } 
                else if (hash === '0005') {
-                   // Special Isolation for Root Compendium
-                   // Hide Site Header
                    header.style.display = 'none';
                    footer.style.display = 'none';
                    breadcrumb.style.display = 'block';
                    
-                   // Show Compendium View container fully (don't isolate just the title element)
                    compView.style.display = 'block';
                    
-                   // Ensure inner structure is visible (Title + Content Section)
                    const compChildren = compView.querySelectorAll(':scope > div');
                    compChildren.forEach(child => child.style.display = 'block');
                    
-                   // Hide Home View
                    homeView.style.display = 'none';
                    
-                    // Force Scroll to Top (Instant)
                     window.scrollTo(0, 0);
                 }
                 else {
-                   // Default Deep Link Isolation
                    breadcrumb.style.display = 'block';
                    header.style.display = 'none';
                    footer.style.display = 'none';
                    
                    if (target) {
                        if (target.id === '0001') {
-                           // Person Exception
                            target.style.display = 'block';
                            document.getElementById('main').style.display = 'none';
                            
@@ -303,10 +278,8 @@
                            if(nav) nav.style.display = 'none';
                            
                        } else {
-                           // Standard Isolation
                            document.getElementById('main').style.display = 'block';
                            
-                           // Bubble Visibility
                            let el = target;
                            while (el && el.id !== 'home-view' && el.id !== 'compendium-view' && el !== document.body) {
                                let parent = el.parentElement;
@@ -356,7 +329,6 @@
           notes.forEach(note => {
              const cats = note.getAttribute('data-categories').split(',');
              const norm = cats.map(c => c.trim());
-             // Fix: Check for 'cat-all' because that matches the XML ID
              if (filter === 'all' || filter === 'cat-all' || norm.includes(filter)) {
                  note.style.display = '';
              } else {
@@ -368,7 +340,6 @@
       window.addEventListener('popstate', checkRoute);
       window.addEventListener('load', checkRoute);
       
-      // Last Updated
       try {
         const lastModified = new Date(); 
         document.getElementById("last-updated-date").textContent = lastModified.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
