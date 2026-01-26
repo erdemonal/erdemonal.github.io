@@ -69,6 +69,13 @@ a:hover {
 /* Specific Link overrides */
 .social-text-link, .nav-link, .intro a, .content-link {
     background: none;
+    border-bottom: none;
+}
+
+.social-text-link:hover, .nav-link:hover, .content-link:hover {
+    text-shadow: 0 0 .65px #333, 0 0 .65px #333; /* Fake bold that doesn't shift layout */
+    font-weight: normal; /* Force stay normal */
+    border-bottom: none;
 }
 
 /* Permalinks */

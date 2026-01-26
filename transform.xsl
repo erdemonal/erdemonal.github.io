@@ -17,7 +17,7 @@
     <title>Erdem Önal</title>
     
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="" />
-    <link rel="dns-prefetch" href="https://www.clarity.ms" />
+
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://erdemonal.github.io/" />
@@ -167,18 +167,7 @@
         </main>
     
         <footer class="footer">
-            <div class="badges-container">
-              <div class="badge-group">
-                <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" title="Explanation of WCAG 2 Level AA conformance" target="_blank" rel="noopener noreferrer" aria-label="WCAG 2.2 Level AA conformance (opens in new tab)">
-                  <img height="32" width="88" src="https://www.w3.org/WAI/WCAG22/wcag2.2AA" alt="Level AA conformance, W3C WAI Web Content Accessibility Guidelines 2.2" />
-                </a>
-              </div>
-              <div class="badge-group" aria-live="polite">
-                <div id="ecoindex-badge" data-ecoindex-url="https://erdemonal.github.io/" role="img" aria-label="EcoIndex environmental impact badge" title="EcoIndex Badge - View environmental impact details (opens in new tab)"></div>
-                <script src="https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@3/assets/js/ecoindex-badge.js" defer="defer" crossorigin="anonymous"></script>
-              </div>
-            </div>
-    
+            
             <div class="last-updated">
               <span class="last-updated-date" id="last-updated-date"></span>
               
@@ -189,6 +178,10 @@
 
     <!-- App Logic -->
     <script>
+      <![CDATA[
+      // Disable native scroll restoration to prevent fighting
+      if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+
       function checkRoute() {
           const hash = window.location.hash.substring(1);
           const breadcrumb = document.getElementById('breadcrumb-nav');
@@ -210,7 +203,7 @@
           // Reset Hidden Elements
           const allHidden = document.querySelectorAll('[style*="display: none"]');
           allHidden.forEach(el => {
-              if (el !== homeView &amp;&amp; el !== compView &amp;&amp; el !== breadcrumb &amp;&amp; el.id !== 'compendium-view' &amp;&amp; el.id !== 'home-view') {
+              if (el !== homeView && el !== compView && el !== breadcrumb && el.id !== 'compendium-view' && el.id !== 'home-view') {
                   el.style.display = '';
               }
           });
@@ -232,7 +225,7 @@
           // Check if we need to show Compendium Container
           // If hash is 'compendium', '0005', or any child of compendium-view
           let showCompendium = (hash === 'compendium' || hash === '0005');
-          if (target &amp;&amp; compView.contains(target)) {
+          if (target && compView.contains(target)) {
                showCompendium = true;
           }
 
@@ -288,8 +281,11 @@
                    
                    // Hide Home View
                    homeView.style.display = 'none';
-               }
-               else {
+                   
+                    // Force Scroll to Top (Instant)
+                    window.scrollTo(0, 0);
+                }
+                else {
                    // Default Deep Link Isolation
                    breadcrumb.style.display = 'block';
                    header.style.display = 'none';
@@ -312,15 +308,15 @@
                            
                            // Bubble Visibility
                            let el = target;
-                           while (el &amp;&amp; el.id !== 'home-view' &amp;&amp; el.id !== 'compendium-view' &amp;&amp; el !== document.body) {
+                           while (el && el.id !== 'home-view' && el.id !== 'compendium-view' && el !== document.body) {
                                let parent = el.parentElement;
                                if (parent) {
                                    let sibling = parent.firstElementChild;
                                    while (sibling) {
-                                       if (sibling !== el &amp;&amp; 
-                                           sibling.tagName !== 'SCRIPT' &amp;&amp; 
-                                           sibling.tagName !== 'STYLE' &amp;&amp;
-                                           sibling.id !== 'breadcrumb-nav' &amp;&amp;
+                                       if (sibling !== el && 
+                                           sibling.tagName !== 'SCRIPT' && 
+                                           sibling.tagName !== 'STYLE' &&
+                                           sibling.id !== 'breadcrumb-nav' &&
                                            sibling.id !== 'main-wrapper') {
                                            sibling.style.display = 'none';
                                        }
@@ -360,7 +356,8 @@
           notes.forEach(note => {
              const cats = note.getAttribute('data-categories').split(',');
              const norm = cats.map(c => c.trim());
-             if (filter === 'all' || norm.includes(filter)) {
+             // Fix: Check for 'cat-all' because that matches the XML ID
+             if (filter === 'all' || filter === 'cat-all' || norm.includes(filter)) {
                  note.style.display = '';
              } else {
                  note.style.display = 'none';
@@ -376,6 +373,7 @@
         const lastModified = new Date(); 
         document.getElementById("last-updated-date").textContent = lastModified.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
       } catch(e){}
+      ]]>
     </script>
   </body>
 </html>
