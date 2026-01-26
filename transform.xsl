@@ -100,7 +100,7 @@
                 </h2>
                 <xsl:for-each select="collection[@id='0004']/item">
                     <div class="content-item" id="{@id}">
-                        <div class="research-title">
+                        <div class="project-title">
                             <xsl:value-of select="dc:title"/>
                             <a class="semantic-id-link-small">
                                 <xsl:attribute name="href">#<xsl:value-of select="@id"/></xsl:attribute>
