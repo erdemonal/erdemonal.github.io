@@ -81,17 +81,20 @@ a:hover {
 /* Permalinks */
 .semantic-id-link, .semantic-id-link-small {
     font-size: 0.75rem;
-    color: #ccc; 
+    color: #555; /* Darker, more visible grey */
     margin-left: 10px;
     vertical-align: middle;
-    opacity: 0.5;
+    opacity: 0.8; /* Higher visibility */
     border-bottom: none!important;
+    font-weight: bold; /* Make it pop */
+    font-family: 'Courier New', monospace;
+    transition: all 0.2s ease;
 }
 
 .semantic-id-link:hover, .semantic-id-link-small:hover {
     opacity: 1;
-    color: #999;
-    text-decoration: none;
+    color: #0056b3; /* Explicit Blue on hover */
+    text-decoration: underline;
     border-bottom: none!important;
 }
 
