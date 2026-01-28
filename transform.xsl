@@ -183,14 +183,12 @@
           const hash = window.location.hash.substring(1);
           const breadcrumb = document.getElementById('breadcrumb-nav');
           const header = document.querySelector('.header');
-          const footer = document.querySelector('.footer');
           const main = document.getElementById('main');
           const homeView = document.getElementById('home-view');
           const compView = document.getElementById('compendium-view');
           const navBtn = document.getElementById('nav-btn');
           
           header.style.display = 'block';
-          footer.style.display = 'block';
           main.style.display = 'block';
           breadcrumb.style.display = 'none';
           homeView.style.display = 'none';
@@ -246,12 +244,10 @@
                
                if (hash === 'compendium') {
                    header.style.display = 'block';
-                   footer.style.display = 'block';
                    breadcrumb.style.display = 'none';
                } 
                else if (hash === '0005') {
                    header.style.display = 'none';
-                   footer.style.display = 'none';
                    breadcrumb.style.display = 'block';
                    
                    compView.style.display = 'block';
@@ -266,7 +262,6 @@
                 else {
                    breadcrumb.style.display = 'block';
                    header.style.display = 'none';
-                   footer.style.display = 'none';
                    
                    if (target) {
                        if (target.id === '0001') {
