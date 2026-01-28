@@ -18,7 +18,15 @@
     
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="" />
     
-    <script data-goatcounter="https://erdemonal.goatcounter.com/count" async="async" src="//gc.zgo.at/count.js"></script>
+    <script type="text/javascript">
+    <![CDATA[
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "v8oeikpmrn");
+    ]]>
+    </script>
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://erdemonal.github.io/" />
@@ -164,14 +172,7 @@
           </div>
         </main>
     
-        <footer class="footer">
-            
-            <div class="last-updated">
-              <span class="last-updated-date" id="last-updated-date"></span>
-              
-
-            </div>
-        </footer>
+        
     </div>
 
     <script>
@@ -340,10 +341,7 @@
       window.addEventListener('popstate', checkRoute);
       window.addEventListener('load', checkRoute);
       
-      try {
-        const lastModified = new Date(); 
-        document.getElementById("last-updated-date").textContent = lastModified.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
-      } catch(e){}
+      
       ]]>
     </script>
   </body>

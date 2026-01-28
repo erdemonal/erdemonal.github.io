@@ -122,18 +122,6 @@ a:hover {
 }
 .filter-button.active { background: #eee; border-color: #ccc; color: #333; }
 
-.footer { margin-top: 80px; text-align: center; }
-.badges-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-.badge-group a { border-bottom: none!important; opacity: 0.7; }
-.badge-group a:hover { opacity: 1; }
-
-.last-updated {
-    margin-top: 40px;
-    padding-top: 20px;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 0.75rem;
-    color: #999;
-}
 
 .compendium-description {
     font-family: "Courier New", Courier, monospace;
