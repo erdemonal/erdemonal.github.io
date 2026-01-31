@@ -305,7 +305,7 @@
       function navigateTo(route) {
           if (route === 'home') {
               history.pushState(null, null, window.location.pathname);
-              window.location.reload(); 
+              checkRoute(); 
           } else if (route === 'compendium') {
               history.pushState(null, null, '#compendium');
               checkRoute();
