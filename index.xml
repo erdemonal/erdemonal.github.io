@@ -7,7 +7,7 @@
         <foaf:title>MSc Student</foaf:title>
         <bio>
             I am a first year MSc student in
-            <a href="https://www.mines-stetienne.fr/formation/cyber-physical-social-systems-cps2/" target="_blank" rel="noopener noreferrer">Cyber-Physical and Social Systems: Artificial Intelligence and Internet of Things (CPS2: AI and IoT).</a>
+            <a class="social-text-link" href="https://www.mines-stetienne.fr/formation/cyber-physical-social-systems-cps2/" target="_blank" rel="noopener noreferrer">Cyber-Physical and Social Systems: Artificial Intelligence and Internet of Things (CPS2: AI and IoT)</a>.
             <br />
             <br />
             CPS2: AI and IoT is the international track of the Master in Computer Science at Université de Lyon, jointly operated by Université Jean Monnet Saint-Étienne and Mines Saint-Étienne (Institut Mines-Télécom).
@@ -44,33 +44,33 @@
     </connectors>
 
     <concept id="0003" type="research-interests">
-        <dc:title>Research Interests</dc:title>
+        <dc:title>Academic Affiliation &amp; Research Interests</dc:title>
         <figure>
-            <source>images/research-interests.webp</source>
-            <alt>Concept map showing relationships between Knowledge Representation, Cyber-Physical Systems, Multi-agent Systems, and Safety Critical Systems.</alt>
-            <title>Research Interests Concept Map: Knowledge Representation, Cyber-Physical Systems, Multi-agent Systems, and Safety Critical Systems</title>
-            <caption>My research interests represented as a concept map</caption>
+            <source>images/erdem-onal-knowledge-graph.svg</source>
+            <alt>RDF data graph depicting Erdem Önal, his academic affiliation, and his research interests.</alt>
+            <title>RDF data graph of Erdem Önal&apos;s academic affiliation and research interests</title>
+            <caption>An RDF data graph representing my academic affiliation and research interests.</caption>
         </figure>
     </concept>
 
     <collection id="0004" type="projects">
         <item id="p-001">
+            <dc:title>Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques</dc:title>
+            <dc:description>A text mining analysis was conducted covering protein–ligand binding studies. Analytical techniques were compared in terms of compound properties. The chemical data as log P–molecular weight hexbin plots were visualized, revealing method-specific trends in ligand physicochemical profiles. Cheminformatics with bibliometrics could guide design in drug discovery.</dc:description>
+            <links>
+                <link>
+                    <url>https://doi.org/10.1016/j.chemolab.2026.105659</url>
+                    <text>View Article</text>
+                </link>
+            </links>
+        </item>
+        <item id="p-002">
             <dc:title>SemanticGAN: Knowledge Graph Completion with Wasserstein GANs</dc:title>
             <dc:description>An experimental research system for knowledge graph completion and RDF triple generation.</dc:description>
             <links>
                 <link>
                     <url>https://github.com/erdemonal/SemanticGAN</url>
                     <text>Project Repository</text>
-                </link>
-            </links>
-        </item>
-        <item id="p-002">
-            <dc:title>A Systematic Mapping Study on Green Load Balancing Algorithms for Cloud Data Centers</dc:title>
-            <dc:description>A systematic mapping study that reviews published research on load balancing in cloud data centers. The paper classifies existing work and discusses open issues related to energy use and resource allocation.</dc:description>
-            <links>
-                <link>
-                    <url>files/systematic-mapping-green-load-balancing.pdf</url>
-                    <text>View PDF</text>
                 </link>
             </links>
         </item>
@@ -85,104 +85,15 @@
             </links>
         </item>
         <item id="p-004">
-            <dc:title>Data Interoperability and Semantics</dc:title>
-            <dc:description>A report that examines data interoperability issues in Sweden’s national open data portal using parliamentary and public datasets. The work analyzes the use of metadata standards and shows how semantic models can be used to align heterogeneous data schemas.</dc:description>
+            <dc:title>A Systematic Mapping Study on Green Load Balancing Algorithms for Cloud Data Centers</dc:title>
+            <dc:description>A systematic mapping study that reviews published research on load balancing in cloud data centers. The paper classifies existing work and discusses open issues related to energy use and resource allocation.</dc:description>
             <links>
                 <link>
-                    <url>files/data-interoperability-semantics.pdf</url>
+                    <url>files/systematic-mapping-green-load-balancing.pdf</url>
                     <text>View PDF</text>
                 </link>
             </links>
         </item>
-    </collection>
-
-    <collection id="0005" type="compendium">
-        <meta>
-            <description>
-                A compendium (pl. compendia or compendiums) is a comprehensive collection of information and analysis pertaining to a body of knowledge. A compendium may concisely summarize a larger work. In most cases, the body of knowledge will concern a specific field of human interest or endeavor (for example: hydrogeology, logology, ichthyology, phytosociology or myrmecology), while a general encyclopedia can be referred to as a "compendium of all human knowledge".
-            </description>
-            <taxonomy>
-                <term id="cat-all" label="All" active="true" />
-                <term id="machine-learning" label="Machine Learning" />
-                <term id="iot" label="IoT" />
-                <term id="system-engineering" label="System Engineering" />
-                <term id="data-interoperability" label="Data Interoperability" />
-            </taxonomy>
-        </meta>
-        <content>
-            <entry id="n-001" category="machine-learning">
-                <dc:title>Markov Decision Processes (MDP)</dc:title>
-                <body_text>The formalism for Reinforcement Learning problems consisting of: States (s), Actions (A), Transition Model T(s,a,s') which is the probability Pr(s'|s,a), and Rewards R(s).</body_text>
-            </entry>
-            <entry id="n-002" category="machine-learning">
-                <dc:title>Bias and Variance Tradeoff</dc:title>
-                <body_text>Bias is how well the model hits its target. Variance is how consistent the model is across multiple datasets. Methods to decrease Bias generally increase Variance (no free lunch theorem).</body_text>
-            </entry>
-            <entry id="n-003" category="machine-learning">
-                <dc:title>Ensemble Learning</dc:title>
-                <body_text>One method to decrease Bias. Various types: Bagging Bootstrap (select data) then Aggregate (avg) identical models. Stacking Learn different models to Aggregate with vote/another model. Boosting Use previous errors to improve the (same) model.</body_text>
-            </entry>
-            <entry id="n-004" category="machine-learning">
-                <dc:title>Hebbian Learning</dc:title>
-                <body_text>When an axon of cell A is near enough to excite a cell B and repeatedly or persistently takes part in firing it, some growth process or metabolic change takes place in one or both cells such that A's efficiency, as one of the cells firing B, is increased.</body_text>
-            </entry>
-            <entry id="n-005" category="machine-learning">
-                <dc:title>Confusion Matrix Definitions</dc:title>
-                <body_text>True positive (TP) correctly indicates positive output. True negative (TN) correctly indicates negative output. False positive (FP) (Type I) wrongly indicates positive output. False negative (FN) (Type II) wrongly indicates negative output.</body_text>
-            </entry>
-            <entry id="n-006" category="iot">
-                <dc:title>System on a Chip (SoC)</dc:title>
-                <body_text>A System on a Chip (SoC) is an integrated circuit (IC) that integrates all or most components of a computer or other electronic system. These components almost always include a central processing unit (CPU), memory, input/output ports and secondary storage.</body_text>
-            </entry>
-            <entry id="n-007" category="iot">
-                <dc:title>LPWAN</dc:title>
-                <body_text>Low Power Wide Area Network (LPWAN) is a type of wireless telecommunication wide area network designed to allow long range communications at a low bit rate among things (connected objects).</body_text>
-            </entry>
-            <entry id="n-008" category="iot">
-                <dc:title>LoRaWAN</dc:title>
-                <body_text>LoRaWAN is a media access control (MAC) layer protocol for managing communication between LPWAN gateways and end-node devices, maintained by the LoRa Alliance.</body_text>
-            </entry>
-            <entry id="n-009" category="iot">
-                <dc:title>Matter Standard</dc:title>
-                <body_text>Matter is a proprietary, royalty-free home automation connectivity standard. It aims to reduce fragmentation across different vendors and achieve interoperability among smart home devices and Internet of things (IoT) platforms from different providers.</body_text>
-            </entry>
-            <entry id="n-010" category="system-engineering">
-                <dc:title>Software Requirement</dc:title>
-                <body_text>Software capability needed by a user to solve a problem or to achieve an objective. Software capability that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed document.</body_text>
-            </entry>
-            <entry id="n-011" category="system-engineering">
-                <dc:title>Unified Modeling Language (UML)</dc:title>
-                <body_text>The UML is a general-purpose visual modeling language intended to provide a standard way to visualize, specify, construct and document the artifacts of a software-intensive system.</body_text>
-            </entry>
-            <entry id="n-012" category="system-engineering">
-                <dc:title>Software Product Quality</dc:title>
-                <body_text>Degree to which the system satisfies the stated and implied needs of its various stakeholders, and thus provides value.</body_text>
-            </entry>
-            <entry id="n-013" category="system-engineering">
-                <dc:title>DevOps</dc:title>
-                <body_text>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). It aims to shorten the systems development life cycle and provide continuous delivery with high software quality.</body_text>
-            </entry>
-            <entry id="n-014" category="system-engineering">
-                <dc:title>Scrum Framework</dc:title>
-                <body_text>A Scrum Master fosters an environment where: 1. A Product Owner orders the work for a complex problem into a Product Backlog. 2. The Scrum Team turns a selection of the work into an Increment of value during a Sprint. 3. The Scrum Team and its stakeholders inspect the results and adjust for the next Sprint. 4. Repeat.</body_text>
-            </entry>
-            <entry id="n-015" category="data-interoperability">
-                <dc:title>Semantic Data Interoperability</dc:title>
-                <body_text>Interoperability so that the meaning of the data model within the context of a subject area is understood by the participating systems.</body_text>
-            </entry>
-            <entry id="n-016" category="data-interoperability">
-                <dc:title>FAIR Principles</dc:title>
-                <body_text>The FAIR principles emphasize machine-actionability (i.e., the capacity of computational systems to find, access, interoperate, and reuse data with none or minimal human intervention) because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data.</body_text>
-            </entry>
-            <entry id="n-017" category="data-interoperability">
-                <dc:title>Common European Data Spaces</dc:title>
-                <body_text>Purpose or sector-specific or cross-sectoral interoperable frameworks for common standards and practices to share or jointly process data for, inter alia, the development of new products and services, scientific research or civil society initiatives.</body_text>
-            </entry>
-            <entry id="n-018" category="data-interoperability">
-                <dc:title>Controlled Vocabularies</dc:title>
-                <body_text>Vocabulary for which the entries, i.e. definition/term pairs, are controlled by a Source Authority based on a rulebase and process for addition/deletion of entries.</body_text>
-            </entry>
-        </content>
     </collection>
 
 </knowledge-graph>
