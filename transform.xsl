@@ -98,7 +98,7 @@
     
             <div class="section" id="0004">
                 <h2>
-                    Research &amp; Projects
+                    Research and Projects
                     <a href="#0004" class="semantic-id-link" title="Permalink to Projects Collection">#0004</a>
                 </h2>
                 <xsl:for-each select="collection[@id='0004']/item">
