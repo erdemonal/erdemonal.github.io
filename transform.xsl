@@ -129,7 +129,10 @@
     
         </main>
     
-        
+        <footer class="site-footer">
+            <span class="footer-text">The rest remains to be seen ...</span>
+        </footer>
+    
     </div>
 
     <script>

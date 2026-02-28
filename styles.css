@@ -117,8 +117,20 @@ a:hover {
     font-family: "Courier New", Courier, monospace;
 }
 
-.research-interests { text-align: center; margin-top: 0; }
-.research-interests-image { max-width: 100%; height: auto; margin-bottom: 10px; opacity: 0.9; }
+.research-interests {
+    text-align: center;
+    margin-top: 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.research-interests-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
 .research-interests-caption { font-size: 0.9rem; color: #000; font-style: normal; }
 .research-interests-caption::before {
     content: "Figure 1: ";
@@ -129,4 +141,15 @@ a:hover {
 }
 
 .skip-link { position: absolute; left: -9999px; }
+.site-footer {
+    margin-top: 40px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+.footer-text {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.8rem;
+    color: #666;
+}
 @media (max-width: 600px) { body { padding: 20px 15px; } h1 { font-size: 1.8rem; } .name-badge { font-size: 2rem; } }
