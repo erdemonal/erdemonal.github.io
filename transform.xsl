@@ -184,6 +184,12 @@
               } else {
                   document.getElementById('main').style.display = 'block';
 
+                 
+                  const socials = document.getElementById('0002');
+                  if (socials && target.id !== '0002') {
+                      socials.style.display = 'none';
+                  }
+
                   let el = target;
                   while (el && el.id !== 'home-view' && el !== document.body) {
                       let parent = el.parentElement;
