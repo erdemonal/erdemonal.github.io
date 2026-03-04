@@ -52,9 +52,15 @@
             <div class="intro">
                 <xsl:copy-of select="entity[@id='0001']/bio/node()"/>
             </div>
+            
+            <div class="header-attribution">
+                <a href="https://en.wikipedia.org/wiki/en:Claude_Monet" title="Claude Monet" target="_blank" rel="noopener noreferrer">Claude Monet</a>, <i><a href="https://commons.wikimedia.org/w/index.php?curid=23750619" title="Impression, soleil levant" target="_blank" rel="noopener noreferrer">Impression, soleil levant</a></i>, 1872. Oil on canvas. Public domain.
+            </div>
     
-            <div class="social-icons" id="0002">
-                <span class="semantic-id-label">
+        </header>
+    
+        <div class="social-icons" id="0002" style="margin-bottom: 60px;">
+            <span class="semantic-id-label">
                     <a href="#0002" class="semantic-id-link" title="Permalink to Social Connectors">#0002</a>
                 </span>
                 <div class="social-list">
@@ -75,8 +81,6 @@
                     </xsl:for-each>
                 </div>
             </div>
-    
-        </header>
     
         <main id="main" tabindex="-1">
           <div id="home-view">
@@ -129,9 +133,7 @@
     
         </main>
     
-        <footer class="site-footer">
-            <span class="footer-text">The rest remains to be seen ...</span>
-        </footer>
+
     
     </div>
 
