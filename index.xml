@@ -38,7 +38,7 @@
         </node>
         <node id="s-005" platform="cv">
             <url>files/cv-erdem-onal.pdf</url>
-            <name>CV (PDF)</name>
+            <name>CV</name>
             <title>Curriculum Vitae (PDF)</title>
         </node>
     </connectors>

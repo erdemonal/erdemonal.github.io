@@ -36,8 +36,7 @@
 
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <a href="#main" class="skip-link">Skip to main content</a>
+    <body>
     
     <div id="breadcrumb-nav" style="display:none; margin-bottom: 20px; font-family: 'Courier New', monospace;">
         <a href="#" onclick="navigateTo('home'); return false;" style="text-decoration: none;">&#171; Home</a>
@@ -64,6 +63,7 @@
                     <a href="#0002" class="semantic-id-link" title="Permalink to Social Connectors">#0002</a>
                 </span>
                 <div class="social-list">
+                    <span class="social-punctuation">{ </span>
                     <xsl:for-each select="connectors[@id='0002']/node">
                         <a class="social-text-link">
                             <xsl:attribute name="href">
@@ -76,9 +76,13 @@
                                 <xsl:attribute name="rel">noopener noreferrer</xsl:attribute>
                             </xsl:if>
                             
-                            [ <xsl:value-of select="name"/> ]
+                            &quot;<xsl:value-of select="name"/>&quot;
                         </a>
+                        <xsl:if test="position() != last()">
+                            <span class="social-punctuation">, </span>
+                        </xsl:if>
                     </xsl:for-each>
+                    <span class="social-punctuation"> }</span>
                 </div>
             </div>
     
