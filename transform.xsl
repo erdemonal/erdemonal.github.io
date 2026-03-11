@@ -53,38 +53,21 @@
             </div>
             
             <div class="header-attribution">
-                <a href="https://en.wikipedia.org/wiki/en:Claude_Monet" title="Claude Monet" target="_blank" rel="noopener noreferrer">Claude Monet</a>, <i><a href="https://commons.wikimedia.org/w/index.php?curid=23750619" title="Impression, soleil levant" target="_blank" rel="noopener noreferrer">Impression, soleil levant</a></i>, 1872. Oil on canvas. Public domain.
+                Claude Monet, <i>Impression, Sunrise</i> (1872).
             </div>
     
         </header>
     
         <div class="social-icons" id="0002" style="margin-bottom: 60px;">
             <span class="semantic-id-label">
-                    <a href="#0002" class="semantic-id-link" title="Permalink to Social Connectors">#0002</a>
-                </span>
-                <div class="social-list">
-                    <span class="social-punctuation">{ </span>
-                    <xsl:for-each select="connectors[@id='0002']/node">
-                        <a class="social-text-link">
-                            <xsl:attribute name="href">
-                                <xsl:value-of select="normalize-space(url)"/>
-                            </xsl:attribute>
-                            <xsl:attribute name="title"><xsl:value-of select="title"/></xsl:attribute>
-                            
-                            <xsl:if test="not(starts-with(normalize-space(url), 'mailto:'))">
-                                <xsl:attribute name="target">_blank</xsl:attribute>
-                                <xsl:attribute name="rel">noopener noreferrer</xsl:attribute>
-                            </xsl:if>
-                            
-                            &quot;<xsl:value-of select="name"/>&quot;
-                        </a>
-                        <xsl:if test="position() != last()">
-                            <span class="social-punctuation">, </span>
-                        </xsl:if>
-                    </xsl:for-each>
-                    <span class="social-punctuation"> }</span>
-                </div>
+                <a href="#0002" class="semantic-id-link" title="Permalink to Contact Information">#0002</a>
+            </span>
+            <div class="social-list contact-block">
+                <div>WWW: <a class="social-text-link" href="https://w3id.org/people/erdemonal" target="_blank" rel="noopener noreferrer">https://w3id.org/people/erdemonal</a></div>
+                <div>IRI: <a class="social-text-link" href="https://w3id.org/people/erdemonal/me" target="_blank" rel="noopener noreferrer">https://w3id.org/people/erdemonal/me</a></div>
+                <div>erdemonal at outlook dot fr</div>
             </div>
+        </div>
     
         <main id="main" tabindex="-1">
           <div id="home-view">
