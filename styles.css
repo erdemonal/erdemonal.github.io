@@ -113,18 +113,6 @@ a:hover,
     font-family: "Hasklig", monospace;
 }
 
-.header-attribution a {
-    color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;
-    border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
-    text-shadow: none;
-}
-
-.header-attribution a:hover {
-    color: rgba(255, 255, 255, 0.9);
-    border-bottom-color: rgba(255, 255, 255, 0.9);
-}
-
 .header a,
 .header .semantic-id-link,
 .header .social-text-link {
@@ -142,16 +130,6 @@ a:hover,
     margin-bottom: 60px;
 }
 
-.main-nav {
-    margin-top: 30px;
-    margin-bottom: 60px;
-    text-align: center;
-}
-
-.nav-link {
-    font-size: 1.2rem;
-}
-
 .social-icons {
     margin-top: 25px;
     text-align: center;
@@ -164,8 +142,16 @@ a:hover,
 }
 
 .contact-block {
-    font-family: "Hasklig", monospace;
+    font-family: "Charis", serif;
     color: #444;
+}
+
+.contact-block .social-text-link {
+    font-family: "Hasklig", monospace;
+}
+
+.email-accent {
+    color: #006AB1;
 }
 
 .semantic-id-label {
@@ -175,13 +161,9 @@ a:hover,
 }
 
 .content-item {
-    margin-bottom: 45px;
-    padding: 0 0 20px 20px;
+    margin-bottom: 32px;
+    padding: 0 0 8px 20px;
     border-left: 3px solid #eee;
-}
-
-.content-item:hover {
-    border-left-color: #ddd;
 }
 
 .project-title {

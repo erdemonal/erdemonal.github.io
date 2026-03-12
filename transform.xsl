@@ -65,7 +65,11 @@
             <div class="social-list contact-block">
                 <div>WWW: <a class="social-text-link" href="https://w3id.org/people/erdemonal" target="_blank" rel="noopener noreferrer">https://w3id.org/people/erdemonal</a></div>
                 <div>IRI: <a class="social-text-link" href="https://w3id.org/people/erdemonal/me" target="_blank" rel="noopener noreferrer">https://w3id.org/people/erdemonal/me</a></div>
-                <div>erdemonal at outlook dot fr</div>
+                <div>
+                    <span class="social-text-link">
+                        erdemonal <span class="email-accent">at</span> outlook <span class="email-accent">dot</span> fr
+                    </span>
+                </div>
             </div>
         </div>
     
