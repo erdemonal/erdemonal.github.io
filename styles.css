@@ -1,181 +1,204 @@
+.intro,
+.name-badge {
+    color: #fff;
+    font-weight: 400
+}
+
+.intro,
+.name-badge,
+h1,
+h2 {
+    font-weight: 400
+}
+
+.header h1,
+.name-badge {
+    text-shadow: 0 2px 4px #000c
+}
+
 body {
-    font-family: "Charis", serif;
-    background: white;
+    font-family: Charis, serif;
+    background: #fff;
     color: #444;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 20px
 }
 
 h1 {
     font-size: 2rem;
-    font-weight: 400;
-    margin: 20px 0;
+    margin: 20px 0
 }
 
 .name-badge {
     font-size: 3rem;
-    font-weight: 400;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    line-height: 1.2;
+    line-height: 1.2
 }
 
 h2 {
     font-size: 1.5rem;
-    font-weight: 400;
     margin-bottom: 20px;
-    color: #222;
+    color: #222
 }
 
 .intro {
     font-size: 1.2rem;
-    font-weight: 400;
     margin-bottom: 40px;
     line-height: 1.7;
-    color: #fff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 1px 3px #000c
 }
 
+.header,
+.section {
+    margin-bottom: 60px
+}
 
 p {
-    margin-bottom: 1.2em;
+    margin-bottom: 1.2em
 }
 
-a,
-.social-text-link,
-.nav-link,
+.content-link,
 .intro a,
-.content-link {
-    font-family: "Hasklig", monospace;
-    font-size: 0.9em;
+.nav-link,
+.social-text-link,
+a {
+    font-family: Hasklig, monospace;
+    font-size: .9em;
     color: #666;
     text-decoration: none;
     border-bottom: none;
-    transition: all 0.2s ease;
-    background: none;
+    transition: .2s;
+    background: 0 0
 }
 
-a:hover,
-.social-text-link:hover,
+.content-link:hover,
 .nav-link:hover,
-.content-link:hover {
+.social-text-link:hover,
+a:hover {
     color: #333;
-    font-weight: normal;
-    border-bottom: none;
+    font-weight: 400;
+    border-bottom: none
 }
-
-
 
 .semantic-id-link,
 .semantic-id-link-small {
-    font-size: 0.75rem;
+    font-size: .75rem;
     color: #555;
     margin-left: 10px;
     vertical-align: middle;
-    opacity: 0.8;
+    opacity: .8;
     border-bottom: none !important;
-    font-weight: bold;
-    font-family: "Hasklig", monospace;
-    transition: all 0.2s ease;
+    font-weight: 700;
+    font-family: Hasklig, monospace;
+    transition: .2s
 }
 
-.semantic-id-link:hover,
-.semantic-id-link-small:hover {
+.semantic-id-link-small:hover,
+.semantic-id-link:hover {
     opacity: 1;
     color: #0056b3;
     text-decoration: underline;
-    border-bottom: none !important;
+    border-bottom: none !important
 }
 
 .header {
-    margin-bottom: 60px;
-    background-image: url('images/background.webp');
+    background-image: url(images/background.webp);
     background-size: cover;
     background-position: center;
-    padding: 60px 40px;
-    position: relative;
+    padding: 70px 45px;
+    position: relative
 }
 
 .header h1 {
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    color: #fff
 }
 
 .header-attribution {
     position: absolute;
     bottom: 8px;
     right: 15px;
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.6);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-    font-family: "Charis", serif;
+    font-size: .7rem;
+    color: #fff9;
+    text-shadow: 0 1px 2px #000c;
+    font-family: Charis, serif
 }
 
-.header a,
 .header .semantic-id-link,
-.header .social-text-link {
+.header .social-text-link,
+.header a {
     color: #fff;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 1px 4px #000c
 }
 
-.header a:hover,
 .header .semantic-id-link:hover,
-.header .social-text-link:hover {
-    color: #e0e0e0;
-}
-
-.section {
-    margin-bottom: 60px;
+.header .social-text-link:hover,
+.header a:hover {
+    color: #e0e0e0
 }
 
 .social-icons {
     margin-top: 25px;
-    text-align: center;
+    text-align: center
 }
 
 .social-list {
     text-align: center;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: .95rem;
+    line-height: 1.6
 }
 
 .contact-block {
-    font-family: "Charis", serif;
-    color: #444;
+    background-color: #fbfbfb;
+    border-left: 4px solid #006ab1;
+    padding: 15px 35px;
+    text-align: left;
+    font-family: Charis, serif;
+    font-size: .95rem;
+    line-height: 2;
+    color: #555;
+    display: inline-block;
+    border-radius: 0 6px 6px 0
 }
 
 .contact-block .social-text-link {
-    font-family: "Hasklig", monospace;
+    font-family: Hasklig, monospace;
+    color: #111;
+    font-weight: 500
+}
+
+.contact-block a.social-text-link:hover {
+    color: red
 }
 
 .email-accent {
-    color: #006AB1;
+    color: #006ab1;
+    font-size: .85em;
+    vertical-align: middle
 }
 
 .semantic-id-label {
     display: block;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .content-item {
     margin-bottom: 32px;
     padding: 0 0 8px 20px;
-    border-left: 3px solid #eee;
+    border-left: 3px solid #eee
 }
 
 .project-title {
     font-weight: 500;
     margin-bottom: 5px;
-    color: #222;
+    color: #222
 }
 
 .project-description {
-    font-size: 0.95rem;
+    font-size: .95rem;
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .project-tag {
@@ -183,12 +206,12 @@ a:hover,
     margin-left: 8px;
     padding: 1px 6px;
     border-radius: 10px;
-    border: 1px solid #006AB1;
-    color: #006AB1;
-    font-size: 0.7rem;
+    border: 1px solid #006ab1;
+    color: #006ab1;
+    font-size: .7rem;
     font-weight: 600;
     vertical-align: middle;
-    font-family: "Hasklig", monospace;
+    font-family: Hasklig, monospace
 }
 
 .research-interests {
@@ -196,7 +219,7 @@ a:hover,
     margin-top: 0;
     max-width: 700px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto
 }
 
 .research-interests-image {
@@ -204,33 +227,33 @@ a:hover,
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-    opacity: 0.9;
+    opacity: .9
 }
 
 .research-interests-caption {
-    font-size: 0.9rem;
+    font-size: .9rem;
     color: #000;
-    font-style: normal;
+    font-style: normal
 }
 
 .research-interests-caption::before {
     content: "Figure 1: ";
-    color: #006AB1;
-    font-size: 0.95em;
+    color: #006ab1;
+    font-size: .95em;
     font-weight: 600;
-    margin-right: 4px;
+    margin-right: 4px
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
     body {
-        padding: 20px 15px;
+        padding: 20px 15px
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.8rem
     }
 
     .name-badge {
-        font-size: 2rem;
+        font-size: 2rem
     }
 }
