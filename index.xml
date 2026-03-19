@@ -65,6 +65,16 @@
             </links>
         </item>
         <item id="p-002">
+            <dc:title>The Narn Ontology</dc:title>
+            <dc:description>The Narn Ontology is an OWL ontology that provides a formal vocabulary for describing story plots and representing characters, locations, events, actions, and temporal relations within a narrative.</dc:description>
+            <links>
+                <link>
+                    <url>https://w3id.org/narn</url>
+                    <text>https://w3id.org/narn</text>
+                </link>
+            </links>
+        </item>
+        <item id="p-003">
             <dc:title>SemanticGAN: Knowledge Graph Completion with Wasserstein GANs</dc:title>
             <dc:description>An experimental research system for knowledge graph completion and RDF triple generation.</dc:description>
             <links>
@@ -74,22 +84,12 @@
                 </link>
             </links>
         </item>
-        <item id="p-003">
+        <item id="p-004">
             <dc:title>Safety Critical Systems in Medical Cyber-Physical Systems</dc:title>
             <dc:description>A report that studies safety challenges in medical cyber physical systems through a real medical device recall case. The work reviews existing safety approaches and discusses how design time verification, runtime mechanisms, and system architecture can be combined to improve patient safety.</dc:description>
             <links>
                 <link>
                     <url>files/safety-critical-medical-cps.pdf</url>
-                    <text>View PDF</text>
-                </link>
-            </links>
-        </item>
-        <item id="p-004">
-            <dc:title>A Systematic Mapping Study on Green Load Balancing Algorithms for Cloud Data Centers</dc:title>
-            <dc:description>A systematic mapping study that reviews published research on load balancing in cloud data centers. The paper classifies existing work and discusses open issues related to energy use and resource allocation.</dc:description>
-            <links>
-                <link>
-                    <url>files/systematic-mapping-green-load-balancing.pdf</url>
                     <text>View PDF</text>
                 </link>
             </links>

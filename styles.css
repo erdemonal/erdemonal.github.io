@@ -67,18 +67,13 @@ a {
     font-size: .9em;
     color: #666;
     text-decoration: none;
-    border-bottom: none;
-    transition: .2s;
+    transition: all .2s;
     background: 0 0
 }
 
-.content-link:hover,
-.nav-link:hover,
-.social-text-link:hover,
 a:hover {
-    color: #333;
-    font-weight: 400;
-    border-bottom: none
+    color: red !important;
+    text-decoration: none !important;
 }
 
 .semantic-id-link,
@@ -88,18 +83,9 @@ a:hover {
     margin-left: 10px;
     vertical-align: middle;
     opacity: .8;
-    border-bottom: none !important;
     font-weight: 700;
     font-family: Hasklig, monospace;
     transition: .2s
-}
-
-.semantic-id-link-small:hover,
-.semantic-id-link:hover {
-    opacity: 1;
-    color: #0056b3;
-    text-decoration: underline;
-    border-bottom: none !important
 }
 
 .header {
@@ -131,12 +117,6 @@ a:hover {
     text-shadow: 0 1px 4px #000c
 }
 
-.header .semantic-id-link:hover,
-.header .social-text-link:hover,
-.header a:hover {
-    color: #e0e0e0
-}
-
 .social-icons {
     margin-top: 25px;
     text-align: center
@@ -149,26 +129,18 @@ a:hover {
 }
 
 .contact-block {
-    background-color: #fbfbfb;
-    border-left: 4px solid #006ab1;
-    padding: 15px 35px;
     text-align: left;
     font-family: Charis, serif;
     font-size: .95rem;
     line-height: 2;
     color: #555;
     display: inline-block;
-    border-radius: 0 6px 6px 0
 }
 
 .contact-block .social-text-link {
     font-family: Hasklig, monospace;
-    color: #111;
+    color: #222;
     font-weight: 500
-}
-
-.contact-block a.social-text-link:hover {
-    color: red
 }
 
 .email-accent {
