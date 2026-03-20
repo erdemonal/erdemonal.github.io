@@ -1,21 +1,3 @@
-.intro,
-.name-badge {
-    color: #fff;
-    font-weight: 400
-}
-
-.intro,
-.name-badge,
-h1,
-h2 {
-    font-weight: 400
-}
-
-.header h1,
-.name-badge {
-    text-shadow: 0 2px 4px #000c
-}
-
 body {
     font-family: Charis, serif;
     background: #fff;
@@ -26,14 +8,27 @@ body {
     padding: 40px 20px
 }
 
-h1 {
-    font-size: 2rem;
-    margin: 20px 0
+.intro,
+.name-badge,
+h1,
+h2 {
+    font-weight: 400
+}
+
+.intro,
+.name-badge,
+.header h1 {
+    color: #fff
 }
 
 .name-badge {
     font-size: 3rem;
     line-height: 1.2
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 20px 0
 }
 
 h2 {
@@ -42,25 +37,17 @@ h2 {
     color: #222
 }
 
-.intro {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    line-height: 1.7;
-    text-shadow: 0 1px 3px #000c
-}
-
-.header,
-.section {
-    margin-bottom: 60px
-}
-
 p {
     margin-bottom: 1.2em
 }
 
+.intro {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.7
+}
+
 .content-link,
-.intro a,
-.nav-link,
 .social-text-link,
 a {
     font-family: Hasklig, monospace;
@@ -71,33 +58,38 @@ a {
     background: 0 0
 }
 
-a:hover {
+a:hover,
+.semantic-id-link:hover,
+.semantic-id-link-small:hover,
+.header .semantic-id-link:hover {
     color: red !important;
-    text-decoration: none !important;
+    text-decoration: none !important
 }
 
 .semantic-id-link,
 .semantic-id-link-small {
     font-size: .75rem;
-    color: #555;
+    padding: 2px 6px;
     margin-left: 10px;
     vertical-align: middle;
-    opacity: .8;
     font-weight: 700;
     font-family: Hasklig, monospace;
-    transition: .2s
+    text-shadow: none !important
 }
 
-.header {
-    background-image: url(images/background.webp);
-    background-size: cover;
-    background-position: center;
-    padding: 70px 45px;
-    position: relative
+.semantic-id-label {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px
 }
 
-.header h1 {
-    color: #fff
+.header h1,
+.name-badge {
+    text-shadow: 0 2px 4px #000c
+}
+
+.intro {
+    text-shadow: 0 1px 3px #000c
 }
 
 .header-attribution {
@@ -110,20 +102,32 @@ a:hover {
     font-family: Charis, serif
 }
 
-.header .semantic-id-link,
-.header .social-text-link,
-.header a {
-    color: #fff;
-    text-shadow: 0 1px 4px #000c
+.header .semantic-id-link {
+    color: #fff !important;
+    background-color: transparent !important
 }
 
-.social-icons {
-    margin-top: 25px;
+.header,
+.section {
+    margin-bottom: 60px
+}
+
+.header {
+    background: url(images/background.webp) center/cover;
+    padding: 70px 45px;
+    position: relative
+}
+
+.social-icons,
+.social-list {
     text-align: center
 }
 
+.social-icons {
+    margin-top: 25px
+}
+
 .social-list {
-    text-align: center;
     font-size: .95rem;
     line-height: 1.6
 }
@@ -134,7 +138,7 @@ a:hover {
     font-size: .95rem;
     line-height: 2;
     color: #555;
-    display: inline-block;
+    display: inline-block
 }
 
 .contact-block .social-text-link {
@@ -147,12 +151,6 @@ a:hover {
     color: #006ab1;
     font-size: .85em;
     vertical-align: middle
-}
-
-.semantic-id-label {
-    display: block;
-    text-align: center;
-    margin-bottom: 10px
 }
 
 .content-item {
@@ -188,15 +186,12 @@ a:hover {
 
 .research-interests {
     text-align: center;
-    margin-top: 0;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto
+    margin: 0 auto;
+    max-width: 700px
 }
 
 .research-interests-image {
     width: 100%;
-    max-width: 100%;
     height: auto;
     margin-bottom: 10px;
     opacity: .9
@@ -216,7 +211,7 @@ a:hover {
     margin-right: 4px
 }
 
-@media (max-width:600px) {
+@media(max-width:600px) {
     body {
         padding: 20px 15px
     }
