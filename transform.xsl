@@ -108,7 +108,7 @@
                                 #<xsl:value-of select="@id"/>
                             </a>
                         </div>
-                        <div class="project-description"><xsl:value-of select="dc:description"/></div>
+                        <div class="project-description"><xsl:copy-of select="dc:description/node()"/></div>
                         <div class="project-links">
                             <xsl:for-each select="links/link">
                                 <a class="content-link" target="_blank" rel="noopener noreferrer">
