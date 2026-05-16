@@ -148,11 +148,13 @@ abbr, acronym { font-style: normal; text-decoration: none; border: none; cursor:
 .research-interests-image { width: 100%; height: auto; margin-bottom: 10px; opacity: .9 }
 .research-interests-caption { font-size: .9rem; color: var(--text); font-style: normal }
 
-.research-interests-caption::before {
-    content: "Figure 1: ";
+.accent-label {
     color: var(--accent);
     font-size: .95em;
-    font-weight: 600;
+    font-weight: 600
+}
+
+.research-interests-caption .accent-label {
     margin-right: 4px
 }
 

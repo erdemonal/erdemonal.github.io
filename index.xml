@@ -48,7 +48,7 @@
             <source>images/erdem-onal-knowledge-graph.svg</source>
             <alt>RDF data graph depicting Erdem Önal, his academic affiliation, and his research interests.</alt>
             <title>RDF data graph of Erdem Önal&apos;s academic affiliation and research interests</title>
-            <caption>An <xhtml:abbr title="Resource Description Framework">RDF</xhtml:abbr> data graph representing my academic affiliation and research interests.</caption>
+            <caption><xhtml:span class="accent-label">Figure 1:</xhtml:span> An <xhtml:abbr title="Resource Description Framework">RDF</xhtml:abbr> data graph representing my academic affiliation and research interests.</caption>
         </figure>
     </concept>
 

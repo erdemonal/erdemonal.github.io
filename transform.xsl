@@ -104,7 +104,7 @@
                         <div class="project-title">
                             <xsl:value-of select="dc:title"/>
                             <xsl:if test="@id='p-001'">
-                                <xsl:text> [Published]</xsl:text>
+                                <span class="accent-label"><xsl:text> [Published]</xsl:text></span>
                             </xsl:if>
                             <a class="semantic-id-link-small">
                                 <xsl:attribute name="href">#<xsl:value-of select="@id"/></xsl:attribute>
