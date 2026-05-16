@@ -37,9 +37,9 @@
   </head>
     <body>
     
-    <div id="breadcrumb-nav" style="display:none; margin-bottom: 20px; font-family: 'Courier New', monospace;">
-        <a href="#" onclick="navigateTo('home'); return false;" style="text-decoration: none;">&#171; Home</a>
-    </div>
+    <nav id="breadcrumb-nav">
+        <a class="content-link" href="#" onclick="navigateTo('home'); return false;">&#171; Home</a>
+    </nav>
 
     <div id="main-wrapper">
         <header class="header" id="0001">
@@ -57,23 +57,21 @@
     
         </header>
     
-        <div class="social-icons" id="0002" style="margin-bottom: 60px;">
+        <div class="social-icons" id="0002">
             <span class="semantic-id-label">
                 <a href="#0002" class="semantic-id-link" title="Permalink to Contact Information">#0002</a>
             </span>
             <div class="social-list contact-block" about="https://w3id.org/people/erdemonal/me" typeof="http://xmlns.com/foaf/0.1/Person">
                 <p>
                     <abbr title="World Wide Web, foaf:homepage: A homepage for some thing.">WWW</abbr>:
-                    <a class="social-text-link" rel="http://xmlns.com/foaf/0.1/homepage noopener noreferrer" href="https://w3id.org/people/erdemonal/" target="_blank">https://w3id.org/people/erdemonal/</a>
+                    <a class="social-text-link" rel="http://xmlns.com/foaf/0.1/homepage noopener noreferrer" href="https://w3id.org/people/erdemonal" target="_blank">https://w3id.org/people/erdemonal</a>
                 </p>
                 <p>
                     <abbr title="Internationalized Resource Identifier, foaf:Person: A person.">IRI</abbr>:
                     <a class="social-text-link" href="https://w3id.org/people/erdemonal/me" target="_blank" rel="noopener noreferrer">https://w3id.org/people/erdemonal/me</a>
                 </p>
                 <p>
-                    <span class="social-text-link">
-                        erdemonal <span class="email-accent">at</span> outlook <span class="email-accent">dot</span> fr
-                    </span>
+                    erdemonal <span class="email-accent">at</span> outlook <span class="email-accent">dot</span> fr
                 </p>
             </div>
         </div>
@@ -106,7 +104,7 @@
                         <div class="project-title">
                             <xsl:value-of select="dc:title"/>
                             <xsl:if test="@id='p-001'">
-                                <span class="project-tag">Published</span>
+                                <xsl:text> [Published]</xsl:text>
                             </xsl:if>
                             <a class="semantic-id-link-small">
                                 <xsl:attribute name="href">#<xsl:value-of select="@id"/></xsl:attribute>

@@ -55,7 +55,7 @@
     <collection id="0004" type="projects">
         <item id="p-001">
             <dc:title>Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques</dc:title>
-            <dc:description>A text mining analysis was conducted covering protein–ligand binding studies. Analytical techniques were compared in terms of compound properties. The chemical data as log P–molecular weight hexbin plots were visualized, revealing method-specific trends in ligand physicochemical profiles. Cheminformatics with bibliometrics could guide design in drug discovery.</dc:description>
+            <dc:description>Text mining is used to analyze chemical environments in protein ligand binding studies across different analytical techniques. Six commonly used methods are compared based on the physicochemical properties of associated compounds. The extracted chemical data are visualized using log P and molecular weight hexbin plots, showing differences in ligand physicochemical profiles across methods. The study shows how cheminformatics and bibliometric analysis can be combined in drug discovery research.</dc:description>
             <links>
                 <link>
                     <url>https://doi.org/10.1016/j.chemolab.2026.105659</url>
