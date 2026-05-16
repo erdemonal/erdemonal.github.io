@@ -17,7 +17,6 @@
     <title>Erdem Önal</title>
     
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="" />
-    
     <script type="text/javascript">
     <![CDATA[
     (function(c,l,a,r,i,t,y){
@@ -62,14 +61,20 @@
             <span class="semantic-id-label">
                 <a href="#0002" class="semantic-id-link" title="Permalink to Contact Information">#0002</a>
             </span>
-            <div class="social-list contact-block">
-                <div>WWW: <a class="social-text-link" href="https://w3id.org/people/erdemonal" target="_blank" rel="noopener noreferrer">https://w3id.org/people/erdemonal</a></div>
-                <div>IRI: <a class="social-text-link" href="https://w3id.org/people/erdemonal/me" target="_blank" rel="noopener noreferrer">https://w3id.org/people/erdemonal/me</a></div>
-                <div>
+            <div class="social-list contact-block" about="https://w3id.org/people/erdemonal/me" typeof="http://xmlns.com/foaf/0.1/Person">
+                <p>
+                    <abbr title="World Wide Web, foaf:homepage: A homepage for some thing.">WWW</abbr>:
+                    <a class="social-text-link" rel="http://xmlns.com/foaf/0.1/homepage noopener noreferrer" href="https://w3id.org/people/erdemonal/" target="_blank">https://w3id.org/people/erdemonal/</a>
+                </p>
+                <p>
+                    <abbr title="Internationalized Resource Identifier, foaf:Person: A person.">IRI</abbr>:
+                    <a class="social-text-link" href="https://w3id.org/people/erdemonal/me" target="_blank" rel="noopener noreferrer">https://w3id.org/people/erdemonal/me</a>
+                </p>
+                <p>
                     <span class="social-text-link">
                         erdemonal <span class="email-accent">at</span> outlook <span class="email-accent">dot</span> fr
                     </span>
-                </div>
+                </p>
             </div>
         </div>
     
