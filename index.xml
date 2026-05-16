@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="transform.xsl"?>
-<knowledge-graph xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<knowledge-graph xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     
     <entity id="0001" type="person">
         <foaf:name>Erdem Önal</foaf:name>
@@ -48,7 +48,7 @@
             <source>images/erdem-onal-knowledge-graph.svg</source>
             <alt>RDF data graph depicting Erdem Önal, his academic affiliation, and his research interests.</alt>
             <title>RDF data graph of Erdem Önal&apos;s academic affiliation and research interests</title>
-            <caption>An RDF data graph representing my academic affiliation and research interests.</caption>
+            <caption>An <xhtml:abbr title="Resource Description Framework">RDF</xhtml:abbr> data graph representing my academic affiliation and research interests.</caption>
         </figure>
     </concept>
 
@@ -65,7 +65,7 @@
         </item>
         <item id="p-002">
             <dc:title>The Eautonome Ontology</dc:title>
-            <dc:description>The Eautonome ontology models a domestic greywater monitoring system using the 2023 edition of SOSA/SSN together with SAREF4WATR. It is included in the W3C SOSA/SSN usage report as both an ontology and a dataset.</dc:description>
+            <dc:description>The Eautonome ontology models a domestic greywater monitoring system using the 2023 edition of <xhtml:abbr title="Semantic Sensor Network Ontology">SOSA/SSN</xhtml:abbr> together with <xhtml:abbr title="An extension of SAREF for the water domain">SAREF4WATR</xhtml:abbr>. It is included in the <xhtml:abbr title="World Wide Web Consortium">W3C</xhtml:abbr> usage report as both an ontology and a dataset.</dc:description>
             <links>
                 <link>
                     <url>https://w3id.org/eautonome</url>
@@ -75,7 +75,7 @@
         </item>
         <item id="p-003">
             <dc:title>The Narn Ontology</dc:title>
-            <dc:description>The Narn Ontology is an OWL ontology that provides a formal vocabulary for describing story plots and representing characters, locations, events, actions, and temporal relations within a narrative.</dc:description>
+            <dc:description>The Narn Ontology is an <xhtml:abbr title="Web Ontology Language">OWL</xhtml:abbr> ontology that provides a formal vocabulary for describing story plots and representing characters, locations, events, actions, and temporal relations within a narrative.</dc:description>
             <links>
                 <link>
                     <url>https://w3id.org/narn</url>
@@ -85,7 +85,7 @@
         </item>
         <item id="p-004">
             <dc:title>SemanticGAN: Knowledge Graph Completion with Wasserstein GANs</dc:title>
-            <dc:description>An experimental research system for knowledge graph completion and RDF triple generation.</dc:description>
+            <dc:description>An experimental research system for knowledge graph completion and <xhtml:abbr title="Resource Description Framework">RDF</xhtml:abbr> triple generation.</dc:description>
             <links>
                 <link>
                     <url>https://github.com/erdemonal/SemanticGAN</url>

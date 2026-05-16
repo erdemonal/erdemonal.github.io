@@ -89,7 +89,7 @@
                         <xsl:attribute name="title"><xsl:value-of select="concept[@id='0003']/figure/title"/></xsl:attribute>
                     </img>
                     <figcaption class="research-interests-caption">
-                        <xsl:value-of select="concept[@id='0003']/figure/caption"/>
+                        <xsl:copy-of select="concept[@id='0003']/figure/caption/node()"/>
                     </figcaption>
                 </figure>
             </div>
