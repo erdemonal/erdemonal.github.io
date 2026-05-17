@@ -148,9 +148,9 @@ abbr, acronym { text-decoration: none; cursor: help }
 .project-description { font-size: .95rem; color: var(--text); margin-bottom: .6em; text-align: left }
 
 .publication-citation { text-align: left; margin-bottom: .5em; line-height: 1.6 }
-.publication-links { text-align: left }
-.publication-links .content-link { display: block; margin-bottom: .35em }
-.publication-links .bibtex-link { display: inline-block; vertical-align: middle }
+.publication-links { text-align: left; line-height: 1.6 }
+.publication-links .content-link { margin-right: .75em }
+.publication-links .bibtex-link { vertical-align: middle }
 .bibtex-link { display: inline-block; vertical-align: middle; line-height: 0; text-decoration: none }
 .bibtex-link img { height: 1em; width: auto; display: block }
 a.bibtex-link:hover img { opacity: .75 }
