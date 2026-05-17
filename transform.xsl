@@ -103,17 +103,17 @@
                     <div class="content-item" id="{@id}">
                         <xsl:choose>
                             <xsl:when test="@type='publication'">
-                                <div class="project-title">
-                                    <xsl:value-of select="citation/title"/>
+                                <div class="publication-citation">
+                                    <span class="citation-authors"><xsl:value-of select="citation/authors"/></span>
+                                    <xsl:text> </xsl:text>
+                                    <span class="citation-title"><xsl:value-of select="citation/title"/></span>
+                                    <xsl:text> </xsl:text>
+                                    <span class="citation-venue"><xsl:value-of select="citation/venue"/></span>
+                                    <xsl:text> </xsl:text>
                                     <a class="perm-link">
                                         <xsl:attribute name="href">#<xsl:value-of select="@id"/></xsl:attribute>
                                         #<xsl:value-of select="@id"/>
                                     </a>
-                                </div>
-                                <div class="publication-citation">
-                                    <span class="citation-authors"><xsl:value-of select="citation/authors"/></span>
-                                    <xsl:text> </xsl:text>
-                                    <span class="citation-venue"><xsl:value-of select="citation/venue"/></span>
                                 </div>
                                 <div class="project-links publication-links">
                                     <xsl:for-each select="links/link">
