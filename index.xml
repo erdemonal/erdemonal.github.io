@@ -53,13 +53,19 @@
     </concept>
 
     <collection id="0004" type="projects">
-        <item id="p-001">
-            <dc:title>Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques</dc:title>
-            <dc:description>Text mining is used to analyze chemical environments in protein ligand binding studies across different analytical techniques. Six commonly used methods are compared based on the physicochemical properties of associated compounds. The extracted chemical data are visualized using log P and molecular weight hexbin plots, showing differences in ligand physicochemical profiles across methods. The study shows how cheminformatics and bibliometric analysis can be combined in drug discovery research.</dc:description>
+        <item id="p-001" type="publication">
+            <citation>
+                <authors>Erdem Önal and Zeynep Kalaycıoğlu.</authors>
+                <title>Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques.</title>
+                <venue>In Chemometrics and Intelligent Laboratory Systems, vol. 271, Elsevier, 2026.</venue>
+            </citation>
             <links>
-                <link>
+                <link type="doi">
                     <url>https://doi.org/10.1016/j.chemolab.2026.105659</url>
-                    <text>View Article</text>
+                    <text>10.1016/j.chemolab.2026.105659</text>
+                </link>
+                <link type="bibtex">
+                    <url>files/2026chemolab.bib</url>
                 </link>
             </links>
         </item>
@@ -85,7 +91,7 @@
         </item>
         <item id="p-004">
             <dc:title>SemanticGAN: Knowledge Graph Completion with Wasserstein GANs</dc:title>
-            <dc:description>An experimental research system for knowledge graph completion and <xhtml:abbr title="Resource Description Framework">RDF</xhtml:abbr> triple generation.</dc:description>
+            <dc:description>An experimental system for knowledge graph completion and RDF triple generation.</dc:description>
             <links>
                 <link>
                     <url>https://github.com/erdemonal/SemanticGAN</url>

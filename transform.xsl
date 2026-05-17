@@ -45,7 +45,7 @@
         <header class="header" id="0001">
             <h1>
                 <span class="name-badge"><xsl:value-of select="entity[@id='0001']/foaf:name"/></span>
-                <a href="#0001" class="semantic-id-link" title="Permalink to Person Entity">#0001</a>
+                <a href="#0001" class="perm-link" title="Permalink to Person Entity">#0001</a>
             </h1>
             <div class="intro">
                 <xsl:copy-of select="entity[@id='0001']/bio/node()"/>
@@ -59,7 +59,7 @@
     
         <div class="social-icons" id="0002">
             <span class="semantic-id-label">
-                <a href="#0002" class="semantic-id-link" title="Permalink to Contact Information">#0002</a>
+                <a href="#0002" class="perm-link" title="Permalink to Contact Information">#0002</a>
             </span>
             <div class="social-list contact-block" about="https://w3id.org/people/erdemonal/me" typeof="http://xmlns.com/foaf/0.1/Person">
                 <p>
@@ -80,7 +80,7 @@
           <div id="home-view">
             <div class="section" id="0003">
                 <span class="semantic-id-label">
-                    <a href="#0003" class="semantic-id-link" title="Permalink to Academic Affiliation &amp; Research Interests Graph">#0003</a>
+                    <a href="#0003" class="perm-link" title="Permalink to Academic Affiliation &amp; Research Interests Graph">#0003</a>
                 </span>
                 <figure class="research-interests">
                     <img class="research-interests-image" loading="eager" fetchpriority="high">
@@ -97,29 +97,62 @@
             <div class="section" id="0004">
                 <h2>
                     Research and Projects
-                    <a href="#0004" class="semantic-id-link" title="Permalink to Projects Collection">#0004</a>
+                    <a href="#0004" class="perm-link" title="Permalink to Projects Collection">#0004</a>
                 </h2>
                 <xsl:for-each select="collection[@id='0004']/item">
                     <div class="content-item" id="{@id}">
-                        <div class="project-title">
-                            <xsl:value-of select="dc:title"/>
-                            <xsl:if test="@id='p-001'">
-                                <span class="accent-label"><xsl:text> [Published]</xsl:text></span>
-                            </xsl:if>
-                            <a class="semantic-id-link-small">
-                                <xsl:attribute name="href">#<xsl:value-of select="@id"/></xsl:attribute>
-                                #<xsl:value-of select="@id"/>
-                            </a>
-                        </div>
-                        <div class="project-description"><xsl:copy-of select="dc:description/node()"/></div>
-                        <div class="project-links">
-                            <xsl:for-each select="links/link">
-                                <a class="content-link" target="_blank" rel="noopener noreferrer">
-                                    <xsl:attribute name="href"><xsl:value-of select="normalize-space(url)"/></xsl:attribute>
-                                    <xsl:value-of select="normalize-space(text)"/>
-                                </a>
-                            </xsl:for-each>
-                        </div>
+                        <xsl:choose>
+                            <xsl:when test="@type='publication'">
+                                <div class="project-title">
+                                    <xsl:value-of select="citation/title"/>
+                                    <a class="perm-link">
+                                        <xsl:attribute name="href">#<xsl:value-of select="@id"/></xsl:attribute>
+                                        #<xsl:value-of select="@id"/>
+                                    </a>
+                                </div>
+                                <div class="publication-citation">
+                                    <span class="citation-authors"><xsl:value-of select="citation/authors"/></span>
+                                    <xsl:text> </xsl:text>
+                                    <span class="citation-venue"><xsl:value-of select="citation/venue"/></span>
+                                </div>
+                                <div class="project-links publication-links">
+                                    <xsl:for-each select="links/link">
+                                        <xsl:choose>
+                                            <xsl:when test="@type='doi'">
+                                                <a class="content-link" target="_blank" rel="noopener noreferrer">
+                                                    <xsl:attribute name="href"><xsl:value-of select="normalize-space(url)"/></xsl:attribute>
+                                                    <xsl:value-of select="normalize-space(text)"/>
+                                                </a>
+                                            </xsl:when>
+                                            <xsl:when test="@type='bibtex'">
+                                                <a class="bibtex-link" target="_blank" rel="noopener noreferrer" title="BibTeX">
+                                                    <xsl:attribute name="href"><xsl:value-of select="normalize-space(url)"/></xsl:attribute>
+                                                    <img src="images/bibtex.png" alt="BibTeX" />
+                                                </a>
+                                            </xsl:when>
+                                        </xsl:choose>
+                                    </xsl:for-each>
+                                </div>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <div class="project-title">
+                                    <xsl:value-of select="dc:title"/>
+                                    <a class="perm-link">
+                                        <xsl:attribute name="href">#<xsl:value-of select="@id"/></xsl:attribute>
+                                        #<xsl:value-of select="@id"/>
+                                    </a>
+                                </div>
+                                <div class="project-description"><xsl:copy-of select="dc:description/node()"/></div>
+                                <div class="project-links">
+                                    <xsl:for-each select="links/link">
+                                        <a class="content-link" target="_blank" rel="noopener noreferrer">
+                                            <xsl:attribute name="href"><xsl:value-of select="normalize-space(url)"/></xsl:attribute>
+                                            <xsl:value-of select="normalize-space(text)"/>
+                                        </a>
+                                    </xsl:for-each>
+                                </div>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </div>
                 </xsl:for-each>
             </div>

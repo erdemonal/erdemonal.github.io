@@ -4,10 +4,9 @@
     --accent: #006ab1;
     --white: #fff;
     --white-dim: #fff9;
-    --border: #eee;
     --shadow: #000c;
     --font-serif: Charis, serif;
-    --font-mono: Hasklig, monospace
+    --font-mono: "Source Code Pro", monospace
 }
 
 @font-face {
@@ -25,6 +24,24 @@
     font-weight: 400;
     font-display: swap;
     src: url(https://cdn.jsdelivr.net/npm/@fontsource/charis-sil@5.2.7/files/charis-sil-latin-ext-400-normal.woff2) format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://cdn.jsdelivr.net/npm/@fontsource/source-code-pro@5.2.5/files/source-code-pro-latin-400-normal.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://cdn.jsdelivr.net/npm/@fontsource/source-code-pro@5.2.5/files/source-code-pro-latin-ext-400-normal.woff2) format("woff2");
     unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF
 }
 
@@ -65,7 +82,7 @@ p { margin-bottom: 1.2em }
 
 .header h1, .name-badge, .intro { color: var(--white) }
 .name-badge { font-size: 3rem; line-height: 1.2 }
-.intro { font-size: 1.2rem; margin-bottom: 40px; line-height: 1.7; text-shadow: 0 1px 3px var(--shadow) }
+.intro { font-size: 1.2rem; margin-bottom: 40px; line-height: 1.7; text-align: left; text-shadow: 0 1px 3px var(--shadow) }
 .header h1, .name-badge { text-shadow: 0 2px 4px var(--shadow) }
 
 .header-attribution {
@@ -78,34 +95,27 @@ p { margin-bottom: 1.2em }
     text-align: right
 }
 
-.header .semantic-id-link { color: var(--white) !important; background-color: transparent !important }
 .section { margin-bottom: 60px }
 
 .content-link, .social-text-link {
     font-family: var(--font-mono);
     font-size: .9em;
     color: var(--accent);
-    text-decoration: none;
-    transition: color .2s;
-    background: transparent
+    text-decoration: none
 }
 
-.semantic-id-link, .semantic-id-link-small {
+.perm-link {
     font-family: var(--font-mono);
-    font-size: .75rem;
-    color: var(--text);
+    font-size: .7em;
+    color: var(--grey);
     text-decoration: none;
-    transition: color .2s;
-    padding: 2px 6px;
-    margin-left: 10px;
-    vertical-align: middle;
-    font-weight: 700;
-    text-shadow: none !important
+    margin-left: .35em
 }
 
-a:hover, .semantic-id-link:hover, .semantic-id-link-small:hover, .header .semantic-id-link:hover {
-    color: red !important;
-    text-decoration: none !important
+.header .perm-link { color: var(--white-dim) }
+
+a.content-link:hover, a.social-text-link:hover, a.perm-link:hover {
+    color: red
 }
 
 .semantic-id-label { display: block; text-align: center; margin-bottom: 10px }
@@ -126,37 +136,30 @@ a:hover, .semantic-id-link:hover, .semantic-id-link-small:hover, .header .semant
 .email-accent { color: var(--accent) }
 
 abbr[title], acronym[title] {
-    font-style: normal;
     cursor: help;
     text-decoration: underline dotted var(--grey);
-    text-underline-offset: 0.12em;
-    border: none
+    text-underline-offset: .12em
 }
 
-abbr, acronym { font-style: normal; text-decoration: none; border: none; cursor: help }
+abbr, acronym { text-decoration: none; cursor: help }
 
-.content-item {
-    margin-bottom: 32px;
-    padding: 0 0 8px 20px;
-    border-left: 3px solid var(--border)
-}
+.content-item { margin-bottom: 2em }
+.project-title { font-weight: 500; margin-bottom: .35em; color: var(--text) }
+.project-description { font-size: .95rem; color: var(--text); margin-bottom: .6em; text-align: left }
 
-.project-title { font-weight: 500; margin-bottom: 5px; color: var(--text) }
-.project-description { font-size: .95rem; color: var(--text); margin-bottom: 10px }
+.publication-citation { font-size: .95rem; text-align: left; margin-bottom: .6em; line-height: 1.6 }
+.publication-links { margin-top: .25em }
+.publication-links .content-link { margin-right: .75em }
+.bibtex-link { display: inline-block; vertical-align: middle; line-height: 0; text-decoration: none }
+.bibtex-link img { height: 1em; width: auto; display: block }
+a.bibtex-link:hover img { opacity: .75 }
 
 .research-interests { text-align: center; margin: 0 auto; max-width: 700px }
 .research-interests-image { width: 100%; height: auto; margin-bottom: 10px; opacity: .9 }
-.research-interests-caption { font-size: .9rem; color: var(--text); font-style: normal }
+.research-interests-caption { font-size: .9rem; color: var(--text); text-align: left }
 
-.accent-label {
-    color: var(--accent);
-    font-size: .95em;
-    font-weight: 600
-}
-
-.research-interests-caption .accent-label {
-    margin-right: 4px
-}
+.accent-label { color: var(--accent); font-size: .95em; font-weight: 600 }
+.research-interests-caption .accent-label { margin-right: 4px }
 
 @media (max-width: 600px) {
     body { padding: 20px 15px }
