@@ -1,6 +1,6 @@
-@prefix erd: <https://w3id.org/people/erdemonal/> .
+@prefix erdemonal: <https://w3id.org/people/erdemonal/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix schema: <http://schema.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -9,12 +9,12 @@
 
 <>
   a foaf:Document ;
-  dc:creator erd:me ;
+  dcterms:creator erdemonal:me ;
   rdfs:comment "This is the authoritative FOAF profile of Erdem Önal, MSc Computer Science Student at Université Jean Monnet and Mines Saint-Étienne."@en ;
-  dc:date "2026-03-11"^^xsd:date ;
-  dc:modified "2026-03-11"^^xsd:date .
+  dcterms:date "2026-03-11"^^xsd:date ;
+  dcterms:modified "2026-08-01"^^xsd:date .
 
-erd:me
+erdemonal:me
   a foaf:Person ;
 
   rdfs:label
@@ -52,14 +52,20 @@ erd:me
   foaf:homepage <https://w3id.org/people/erdemonal/> ;
   foaf:mbox <erdemonal@outlook.fr> ;
 
+  foaf:knows
+    <https://w3id.org/people/az/me>,
+    <http://maxime-lefrancois.info/#me> ;
+
+  schema:homeLocation erdemonal:saint-etienne ;
+
   schema:alumniOf <https://www.mines-stetienne.fr/formation/cyber-physical-social-systems-cps2/> ;
-schema:researchInterest (
-  "Semantic Web"
-  "Automata Theory"
-  "Knowledge Graphs"
-  "Safety Critical Systems"
-) ;
-  dc:creator erd:me ;
+  schema:researchInterest (
+    "Semantic Web"
+    "Automata Theory"
+    "Knowledge Graphs"
+    "Safety Critical Systems"
+  ) ;
+  dcterms:creator erdemonal:me ;
 
   rdfs:seeAlso
     <https://www.linkedin.com/in/e-onal/>,
@@ -67,7 +73,7 @@ schema:researchInterest (
     <https://orcid.org/0009-0006-6580-3711>,
     <https://erdemonal.github.io> ;
 
-  rdfs:comment """Erdem Önal is a first year MSc student in Cyber-Physical and Social Systems: Artificial Intelligence and Internet of Things (CPS2: AI and IoT)."""@en ;
+  rdfs:comment """Erdem Önal is a second year MSc student in Cyber-Physical and Social Systems: Artificial Intelligence and Internet of Things (CPS2: AI and IoT)."""@en ;
 
   owl:sameAs <https://w3id.org/people/erdemonal/> ;
 
@@ -76,3 +82,20 @@ schema:researchInterest (
     cert:exponent 65537 ;
     cert:modulus "00c16ff6ea13002294bca68e6eebd09ea25d538872028f3bdf11d421861674fdd2401c3a8d6026fc892bd703f8fec6eab231a178c00a89184e0e838b6ae2ec8c7f851fef133c148fbe3f8ee5641d87415d3368cfdb8ff20838e3f347cdabb564cb00c6d5e9887f7e8bc45b3659cdd54c1375e484da6a0ed84cbe56737b7e86323abb8b200ad3f2e3c64c01e5fd5366365a7c309b7447c32e35d4fcd45efbbc6b1fa73c60cdf077dc95f219666b0fe4b6222086eadbff0bf2e12cd8336199d9a616892fc878d6dcad4cff95e66651fef400f2885eb8a49e4bef22d2475498996fc075e38a4d3452735383faac324d501e38d12c4603b3c16cd359642befd682ce65"^^xsd:hexBinary
   ] .
+
+erdemonal:saint-etienne
+  a schema:City, schema:Place ;
+  schema:name
+    "Saint-Étienne"@fr,
+    "Saint-Etienne"@en,
+    "St. Etienne"@en ;
+  schema:alternateName
+    "Armeville"@fr,
+    "Commune d'Armes"@fr ;
+  schema:description """Saint-Étienne, also written St. Etienne, is a city and the prefecture of the Loire département in east-central France, located in the Massif Central, approximately 60 km southwest of Lyon, in the Auvergne-Rhône-Alpes region. Saint-Étienne is the thirteenth most populous commune in France and the second most populous commune in the Auvergne-Rhône-Alpes region.
+
+During the French Revolution, in November 1793, the city temporarily shed its religious name, Saint-Étienne. Because the city's metalworkers and factories worked around the clock to mass-produce rifles and weapons for the French revolutionary military, the town was officially renamed Armeville (also referred to as Commune d'Armes). The name Armeville was officially abolished, and the city reverted to the name Saint-Étienne by a royal decree issued by King Louis XVIII on July 8, 1814."""@en ;
+  schema:addressCountry "FR" ;
+  schema:addressRegion "Auvergne-Rhône-Alpes" ;
+  owl:sameAs <https://www.wikidata.org/entity/Q42716> ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Saint-%C3%89tienne> .
