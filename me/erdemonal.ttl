@@ -6,6 +6,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix cert: <http://www.w3.org/ns/auth/cert#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
 
 <>
   a foaf:Document ;
@@ -50,7 +54,7 @@ erdemonal:me
     "Önal"@es ;
 
   foaf:homepage <https://w3id.org/people/erdemonal/> ;
-  foaf:mbox <erdemonal@outlook.fr> ;
+  foaf:mbox <mailto:erdemonal@outlook.fr> ;
 
   foaf:knows
     <https://w3id.org/people/az/me>,
@@ -58,14 +62,10 @@ erdemonal:me
 
   schema:homeLocation erdemonal:saint-etienne ;
 
-  schema:alumniOf <https://www.mines-stetienne.fr/formation/cyber-physical-social-systems-cps2/> ;
-  schema:researchInterest (
-    "Semantic Web"
-    "Automata Theory"
-    "Knowledge Graphs"
-    "Safety Critical Systems"
-  ) ;
-  dcterms:creator erdemonal:me ;
+  schema:affiliation <https://www.mines-stetienne.fr/formation/cyber-physical-social-systems-cps2/> ;
+
+  vivo:hasResearchArea erdemonal:SemanticWeb , erdemonal:KRR ;
+  schema:knowsAbout erdemonal:OntologyEngineering , erdemonal:KnowledgeGraphs ;
 
   rdfs:seeAlso
     <https://www.linkedin.com/in/e-onal/>,
@@ -75,13 +75,28 @@ erdemonal:me
 
   rdfs:comment """Erdem Önal is a second year MSc student in Cyber-Physical and Social Systems: Artificial Intelligence and Internet of Things (CPS2: AI and IoT)."""@en ;
 
-  owl:sameAs <https://w3id.org/people/erdemonal/> ;
-
   cert:key [
     a cert:RSAPublicKey ;
     cert:exponent 65537 ;
     cert:modulus "00c16ff6ea13002294bca68e6eebd09ea25d538872028f3bdf11d421861674fdd2401c3a8d6026fc892bd703f8fec6eab231a178c00a89184e0e838b6ae2ec8c7f851fef133c148fbe3f8ee5641d87415d3368cfdb8ff20838e3f347cdabb564cb00c6d5e9887f7e8bc45b3659cdd54c1375e484da6a0ed84cbe56737b7e86323abb8b200ad3f2e3c64c01e5fd5366365a7c309b7447c32e35d4fcd45efbbc6b1fa73c60cdf077dc95f219666b0fe4b6222086eadbff0bf2e12cd8336199d9a616892fc878d6dcad4cff95e66651fef400f2885eb8a49e4bef22d2475498996fc075e38a4d3452735383faac324d501e38d12c4603b3c16cd359642befd682ce65"^^xsd:hexBinary
   ] .
+
+erdemonal:SemanticWeb a skos:Concept ;
+  skos:prefLabel "Semantic Web"@en ;
+  skos:broader erdemonal:KRR ;
+  skos:exactMatch dbr:Semantic_Web , wd:Q54837 .
+
+erdemonal:KRR a skos:Concept ;
+  skos:prefLabel "Knowledge Representation and Reasoning"@en ;
+  skos:exactMatch dbr:Knowledge_representation_and_reasoning , wd:Q3478658 .
+
+erdemonal:OntologyEngineering a skos:Concept ;
+  skos:prefLabel "Ontology Engineering"@en ;
+  skos:exactMatch dbr:Ontology_engineering , wd:Q1027508 .
+
+erdemonal:KnowledgeGraphs a skos:Concept ;
+  skos:prefLabel "Knowledge Graphs"@en ;
+  skos:exactMatch dbr:Knowledge_graph , wd:Q33002955 .
 
 erdemonal:saint-etienne
   a schema:City, schema:Place ;
