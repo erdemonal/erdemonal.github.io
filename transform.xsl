@@ -79,9 +79,18 @@
         <main id="main" tabindex="-1">
           <div id="home-view">
             <div class="section" id="0003">
-                <span class="semantic-id-label">
-                    <a href="#0003" class="perm-link" title="Permalink to Academic Affiliation &amp; Research Interests Graph">#0003</a>
-                </span>
+                <h2>
+                    <xsl:value-of select="concept[@id='0003']/domains/heading"/>
+                    <a href="#0003" class="perm-link" title="Permalink to Domains of study">#0003</a>
+                </h2>
+                <div class="project-description">
+                    <p><xsl:value-of select="concept[@id='0003']/domains/intro"/></p>
+                    <ul>
+                        <xsl:for-each select="concept[@id='0003']/domains/topics/topic">
+                            <li><xsl:copy-of select="node()"/></li>
+                        </xsl:for-each>
+                    </ul>
+                </div>
                 <figure class="research-interests">
                     <img class="research-interests-image" loading="eager" fetchpriority="high">
                         <xsl:attribute name="src"><xsl:value-of select="normalize-space(concept[@id='0003']/figure/source)"/></xsl:attribute>

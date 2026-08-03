@@ -44,6 +44,15 @@
 
     <concept id="0003" type="research-interests">
         <dc:title>Academic Affiliation &amp; Research Interests</dc:title>
+        <domains>
+            <heading>Domains of study</heading>
+            <intro>My research is in the field of the Semantic Web. I am especially interested in methods and models for representing and exploiting multiple sources of information. This applies to:</intro>
+            <topics>
+                <topic>Knowledge representation and ontology engineering</topic>
+                <topic>Knowledge graphs (<xhtml:abbr title="Resource Description Framework">RDF</xhtml:abbr> graph construction and completion)</topic>
+                <topic>Linked Data, publishing interoperable and dereferenceable data on the Web</topic>
+            </topics>
+        </domains>
         <figure>
             <source>images/erdem-onal-knowledge-graph.svg</source>
             <alt>RDF data graph depicting Erdem Önal, his academic affiliation, and his research interests.</alt>

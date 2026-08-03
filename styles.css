@@ -106,7 +106,7 @@ p { margin-bottom: 1.2em }
 
 .perm-link {
     font-family: var(--font-mono);
-    font-size: .7em;
+    font-size: .7rem;
     color: var(--grey);
     text-decoration: none;
     margin-left: .35em
@@ -145,10 +145,23 @@ abbr, acronym { text-decoration: none; cursor: help }
 
 .content-item { margin-bottom: 2em }
 .project-title { font-weight: 500; margin-bottom: .35em; color: var(--text) }
-.project-description { font-size: .95rem; color: var(--text); margin-bottom: .6em; text-align: left }
 
-.publication-citation { text-align: left; margin-bottom: .5em; line-height: 1.6 }
-.publication-links { text-align: left; line-height: 1.6 }
+.project-description,
+.publication-citation,
+.publication-links,
+.research-interests-caption {
+    text-align: left;
+    color: var(--text);
+    line-height: 1.6
+}
+
+.project-description { font-size: .95rem; margin-bottom: .6em }
+.section > .project-description { margin-bottom: 1.5em }
+.project-description p { margin: 0 0 .75em }
+.project-description ul { margin: 0; padding: 0 0 0 2em }
+.project-description li { margin-bottom: .35em }
+
+.publication-citation { margin-bottom: .5em }
 .publication-links .content-link { margin-right: .75em }
 .publication-links .bibtex-link { vertical-align: middle }
 .bibtex-link { display: inline-block; vertical-align: middle; line-height: 0; text-decoration: none }
@@ -157,7 +170,7 @@ a.bibtex-link:hover img { opacity: .75 }
 
 .research-interests { text-align: center; margin: 0 auto; max-width: 700px }
 .research-interests-image { width: 100%; height: auto; margin-bottom: 10px; opacity: .9 }
-.research-interests-caption { font-size: .9rem; color: var(--text); text-align: left }
+.research-interests-caption { font-size: .9rem }
 
 .accent-label { color: var(--accent); font-size: .95em; font-weight: 600 }
 .research-interests-caption .accent-label { margin-right: 4px }
