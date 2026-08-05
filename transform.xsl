@@ -145,7 +145,7 @@
                             </xsl:when>
                             <xsl:otherwise>
                                 <div class="project-title">
-                                    <xsl:value-of select="dc:title"/>
+                                    <xsl:copy-of select="dc:title/node()"/>
                                     <a class="perm-link">
                                         <xsl:attribute name="href">#<xsl:value-of select="@id"/></xsl:attribute>
                                         #<xsl:value-of select="@id"/>

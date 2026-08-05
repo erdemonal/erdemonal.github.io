@@ -6,7 +6,7 @@
         <foaf:name>Erdem Önal</foaf:name>
         <foaf:title>MSc Student</foaf:title>
         <bio>
-            I am a second year MSc student in Cyber-Physical and Social Systems: Artificial Intelligence and Internet of Things (CPS2: AI and IoT).
+            I am a second year <xhtml:abbr title="Master of Science">MSc</xhtml:abbr> student in Cyber-Physical and Social Systems: Artificial Intelligence and Internet of Things (<xhtml:abbr title="Cyber-Physical and Social Systems">CPS2</xhtml:abbr>: <xhtml:abbr title="Artificial Intelligence">AI</xhtml:abbr> and <xhtml:abbr title="Internet of Things">IoT</xhtml:abbr>).
             <br />
             <br />
             CPS2: AI and IoT is the international track of the Master's program in Computer Science at Université de Lyon, jointly operated by Université Jean Monnet Saint-Étienne and Mines Saint-Étienne (Institut Mines-Télécom).
@@ -48,7 +48,7 @@
             <heading>Domains of study</heading>
             <intro>My research is in the field of the Semantic Web. I am especially interested in methods and models for representing and exploiting multiple sources of information. This applies to:</intro>
             <topics>
-                <topic>Knowledge representation and ontology engineering</topic>
+                <topic>Knowledge representation and reasoning, and ontology engineering</topic>
                 <topic>Knowledge graphs (<xhtml:abbr title="Resource Description Framework">RDF</xhtml:abbr> graph construction and completion)</topic>
                 <topic>Linked Data, publishing interoperable and dereferenceable data on the Web</topic>
             </topics>
@@ -57,7 +57,7 @@
             <source>images/erdem-onal-knowledge-graph.svg</source>
             <alt>RDF data graph depicting Erdem Önal, his academic affiliation, and his research interests.</alt>
             <title>RDF data graph of Erdem Önal&apos;s academic affiliation and research interests</title>
-            <caption><xhtml:span class="accent-label">Figure 1:</xhtml:span> An <xhtml:abbr title="Resource Description Framework">RDF</xhtml:abbr> data graph representing my academic affiliation and research interests.</caption>
+            <caption><xhtml:span class="accent-label">Figure 1:</xhtml:span> An RDF data graph representing my academic affiliation and research interests.</caption>
         </figure>
     </concept>
 
@@ -80,7 +80,7 @@
         </item>
         <item id="p-002">
             <dc:title>The Eautonome Ontology</dc:title>
-            <dc:description>The Eautonome ontology models a domestic greywater monitoring system using the 2023 edition of <xhtml:abbr title="Semantic Sensor Network Ontology">SOSA/SSN</xhtml:abbr> together with <xhtml:abbr title="An extension of SAREF for the water domain">SAREF4WATR</xhtml:abbr>. It is included in the <xhtml:abbr title="World Wide Web Consortium">W3C</xhtml:abbr> usage report as both an ontology and a dataset.</dc:description>
+            <dc:description>The Eautonome ontology models a domestic greywater monitoring system using the 2023 edition of <xhtml:abbr title="Sensor, Observation, Sample, and Actuator / Semantic Sensor Network">SOSA/SSN</xhtml:abbr> together with <xhtml:abbr title="Smart Applications REFerence ontology for the water domain">SAREF4WATR</xhtml:abbr>. It is included in the <xhtml:abbr title="World Wide Web Consortium">W3C</xhtml:abbr> usage report as both an ontology and a dataset.</dc:description>
             <links>
                 <link>
                     <url>https://w3id.org/eautonome</url>
@@ -99,7 +99,7 @@
             </links>
         </item>
         <item id="p-004">
-            <dc:title>SemanticGAN: Knowledge Graph Completion with Wasserstein GANs</dc:title>
+            <dc:title>SemanticGAN: Knowledge Graph Completion with Wasserstein <xhtml:abbr title="Generative Adversarial Networks">GANs</xhtml:abbr></dc:title>
             <dc:description>An experimental system for knowledge graph completion and RDF triple generation.</dc:description>
             <links>
                 <link>
