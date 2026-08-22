@@ -253,11 +253,35 @@ body.is-section-focus #breadcrumb-nav {
     padding: 16px 40px 0
 }
 
+@media (max-width: 800px) {
+    .header { line-height: 1.6 }
+    .header-inner {
+        position: static;
+        padding: 18px 0 0;
+        background: none
+    }
+    .header h1,
+    .header .name-badge,
+    .header .intro {
+        color: var(--text);
+        text-shadow: none
+    }
+    .header .perm-link { color: var(--grey) }
+    .header .intro { margin-bottom: 12px; font-size: 1.05rem }
+    .header-attribution {
+        position: static;
+        display: block;
+        margin-top: 8px;
+        color: var(--grey);
+        text-shadow: none
+    }
+    .name-badge { font-size: 2.2rem }
+}
+
 @media (max-width: 600px) {
     body { padding: 12px 8px }
     #main { padding-left: 18px; padding-right: 18px }
     body.is-section-focus #breadcrumb-nav { padding-left: 18px; padding-right: 18px }
-    .header-inner { padding: 36px 18px 44px }
     .social-icons { padding: 0 18px }
     h1 { font-size: 1.8rem }
     .name-badge { font-size: 2rem }

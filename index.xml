@@ -83,6 +83,10 @@
             <dc:description>The Eautonome ontology models a domestic greywater monitoring system using the 2023 edition of <xhtml:abbr title="Sensor, Observation, Sample, and Actuator / Semantic Sensor Network">SOSA/SSN</xhtml:abbr> together with <xhtml:abbr title="Smart Applications REFerence ontology for the water domain">SAREF4WATR</xhtml:abbr>. It is included in the <xhtml:abbr title="World Wide Web Consortium">W3C</xhtml:abbr> usage report as both an ontology and a dataset.</dc:description>
             <links>
                 <link>
+                    <url>https://doi.org/10.5281/zenodo.21894602</url>
+                    <text>10.5281/zenodo.21894602</text>
+                </link>
+                <link>
                     <url>https://w3id.org/eautonome</url>
                     <text>https://w3id.org/eautonome</text>
                 </link>
