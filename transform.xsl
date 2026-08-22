@@ -42,18 +42,12 @@
         <a class="content-link" href="#" onclick="navigateTo('home'); return false;">&#171; Home</a>
     </nav>
         <header class="header" id="0001">
-            <img class="header-art" src="images/background.webp" alt="" width="1920" height="1489" />
-            <div class="header-inner">
-                <h1>
-                    <span class="name-badge"><xsl:value-of select="entity[@id='0001']/foaf:name"/></span>
-                    <a href="#0001" class="perm-link" title="Permalink to Person Entity">#0001</a>
-                </h1>
-                <div class="intro">
-                    <xsl:copy-of select="entity[@id='0001']/bio/node()"/>
-                </div>
-                <div class="header-attribution">
-                    Claude Monet, <i>Impression, Sunrise</i> (1872).
-                </div>
+            <h1>
+                <span class="name-badge"><xsl:value-of select="entity[@id='0001']/foaf:name"/></span>
+                <a href="#0001" class="perm-link" title="Permalink to Person Entity">#0001</a>
+            </h1>
+            <div class="intro">
+                <xsl:copy-of select="entity[@id='0001']/bio/node()"/>
             </div>
         </header>
 
@@ -213,7 +207,7 @@
           const homeView = document.getElementById('home-view');
 
           clearInlineDisplay(wrap);
-          document.body.classList.remove('is-focus', 'is-header-focus', 'is-section-focus');
+          document.body.classList.remove('is-focus', 'is-section-focus');
           header.style.display = '';
           main.style.display = '';
           homeView.style.display = '';
@@ -232,8 +226,9 @@
           }
 
           document.body.classList.add('is-focus');
-          if (target.id === '0001') document.body.classList.add('is-header-focus');
-          else if (target.closest('#main')) document.body.classList.add('is-section-focus');
+          if (target.id === '0001' || target.closest('#main')) {
+              document.body.classList.add('is-section-focus');
+          }
           isolate(target);
           requestAnimationFrame(function () {
               requestAnimationFrame(centerPaper);
