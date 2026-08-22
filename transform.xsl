@@ -33,7 +33,7 @@
     <meta property="og:description" content="MSc Computer Science Student at Université Jean Monnet &amp; Mines Saint-Étienne" />
     <meta property="og:image" content="https://erdemonal.github.io/images/research-interests.webp" />
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=focus" />
   </head>
     <body>
     
@@ -191,13 +191,7 @@
       }
 
       function centerPaper() {
-          const wrap = document.getElementById('main-wrapper');
-          if (!wrap) return;
-          const vh = window.innerHeight;
-          const h = wrap.getBoundingClientRect().height;
-          const absTop = wrap.getBoundingClientRect().top + window.scrollY;
-          const y = h < vh ? absTop - (vh - h) / 2 : absTop - 16;
-          window.scrollTo(0, Math.max(0, y));
+          window.scrollTo(0, 0);
       }
 
       function checkRoute() {
