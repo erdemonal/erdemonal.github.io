@@ -37,26 +37,26 @@
   </head>
     <body>
     
+    <div id="main-wrapper">
     <nav id="breadcrumb-nav">
         <a class="content-link" href="#" onclick="navigateTo('home'); return false;">&#171; Home</a>
     </nav>
-
-    <div id="main-wrapper">
         <header class="header" id="0001">
-            <h1>
-                <span class="name-badge"><xsl:value-of select="entity[@id='0001']/foaf:name"/></span>
-                <a href="#0001" class="perm-link" title="Permalink to Person Entity">#0001</a>
-            </h1>
-            <div class="intro">
-                <xsl:copy-of select="entity[@id='0001']/bio/node()"/>
+            <img class="header-art" src="images/background.webp" alt="" width="1920" height="1489" />
+            <div class="header-inner">
+                <h1>
+                    <span class="name-badge"><xsl:value-of select="entity[@id='0001']/foaf:name"/></span>
+                    <a href="#0001" class="perm-link" title="Permalink to Person Entity">#0001</a>
+                </h1>
+                <div class="intro">
+                    <xsl:copy-of select="entity[@id='0001']/bio/node()"/>
+                </div>
+                <div class="header-attribution">
+                    Claude Monet, <i>Impression, Sunrise</i> (1872).
+                </div>
             </div>
-            
-            <div class="header-attribution">
-                Claude Monet, <i>Impression, Sunrise</i> (1872).
-            </div>
-    
         </header>
-    
+
         <div class="social-icons" id="0002">
             <span class="semantic-id-label">
                 <a href="#0002" class="perm-link" title="Permalink to Contact Information">#0002</a>
@@ -168,88 +168,76 @@
           </div>
     
         </main>
-    
-
-    
     </div>
 
     <script>
       <![CDATA[
       if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
 
+      function clearInlineDisplay(root) {
+          root.querySelectorAll('*').forEach(el => {
+              if (el.style.display) el.style.display = '';
+          });
+      }
+
+      function isolate(target) {
+          let node = target;
+          while (node && node.id !== 'main-wrapper') {
+              const parent = node.parentElement;
+              if (!parent) break;
+              Array.from(parent.children).forEach(sib => {
+                  if (sib === node) return;
+                  if (sib.id === 'breadcrumb-nav') return;
+                  if (sib.tagName === 'SCRIPT' || sib.tagName === 'STYLE') return;
+                  sib.style.display = 'none';
+              });
+              node.style.display = 'block';
+              node = parent;
+          }
+      }
+
+      function centerPaper() {
+          const wrap = document.getElementById('main-wrapper');
+          if (!wrap) return;
+          const vh = window.innerHeight;
+          const h = wrap.getBoundingClientRect().height;
+          const absTop = wrap.getBoundingClientRect().top + window.scrollY;
+          const y = h < vh ? absTop - (vh - h) / 2 : absTop - 16;
+          window.scrollTo(0, Math.max(0, y));
+      }
+
       function checkRoute() {
-          const hash = window.location.hash.substring(1);
-          const breadcrumb = document.getElementById('breadcrumb-nav');
+          const wrap = document.getElementById('main-wrapper');
           const header = document.querySelector('.header');
           const main = document.getElementById('main');
           const homeView = document.getElementById('home-view');
 
-          header.style.display = 'block';
-          main.style.display = 'block';
-          breadcrumb.style.display = 'none';
-          homeView.style.display = 'none';
-
-          const allHidden = document.querySelectorAll('[style*="display: none"]');
-          allHidden.forEach(el => {
-              if (el !== homeView && el !== breadcrumb && el.id !== 'home-view') {
-                  el.style.display = '';
-              }
-          });
-          document.querySelectorAll('.section, .content-item, .intro, .name-badge, .social-icons, h1').forEach(el => el.style.display = '');
-
+          clearInlineDisplay(wrap);
+          document.body.classList.remove('is-focus', 'is-header-focus', 'is-section-focus');
+          header.style.display = '';
+          main.style.display = '';
+          homeView.style.display = '';
           document.title = 'Erdem Önal';
 
+          const hash = window.location.hash.replace(/^#/, '');
           if (!hash) {
-              homeView.style.display = 'block';
               window.scrollTo(0, 0);
               return;
           }
 
           const target = document.getElementById(hash);
-
-          breadcrumb.style.display = 'block';
-          header.style.display = 'none';
-
-          if (target) {
-              if (target.id === '0001') {
-                  target.style.display = 'block';
-                  document.getElementById('main').style.display = 'none';
-
-                  const socials = document.getElementById('0002');
-                  if (socials) socials.style.display = 'none';
-              } else {
-                  document.getElementById('main').style.display = 'block';
-
-                 
-                  const socials = document.getElementById('0002');
-                  if (socials && target.id !== '0002') {
-                      socials.style.display = 'none';
-                  }
-
-                  let el = target;
-                  while (el && el.id !== 'home-view' && el !== document.body) {
-                      let parent = el.parentElement;
-                      if (parent) {
-                          let sibling = parent.firstElementChild;
-                          while (sibling) {
-                              if (sibling !== el &&
-                                  sibling.tagName !== 'SCRIPT' &&
-                                  sibling.tagName !== 'STYLE' &&
-                                  sibling.id !== 'breadcrumb-nav' &&
-                                  sibling.id !== 'main-wrapper') {
-                                  sibling.style.display = 'none';
-                              }
-                              sibling = sibling.nextElementSibling;
-                          }
-                          parent.style.display = 'block';
-                      }
-                      el.style.display = 'block';
-                      el = parent;
-                  }
-              }
+          if (!target) {
+              window.scrollTo(0, 0);
+              return;
           }
-          
-          window.scrollTo(0, 0);
+
+          document.body.classList.add('is-focus');
+          if (target.id === '0001') document.body.classList.add('is-header-focus');
+          else if (target.closest('#main')) document.body.classList.add('is-section-focus');
+          isolate(target);
+          requestAnimationFrame(function () {
+              requestAnimationFrame(centerPaper);
+          });
       }
 
       function navigateTo(route) {
@@ -259,10 +247,9 @@
           }
       }
 
+      window.addEventListener('hashchange', checkRoute);
       window.addEventListener('popstate', checkRoute);
       window.addEventListener('load', checkRoute);
-      
-      
       ]]>
     </script>
   </body>
