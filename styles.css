@@ -46,12 +46,12 @@
 
 html {
     min-height: 100%;
+    min-height: 100dvh;
     background-color: var(--archive);
     background-image: url(images/hugo-la-souris.webp);
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed
+    background-position: top center;
+    background-size: 100% auto
 }
 
 #breadcrumb-nav {
@@ -78,7 +78,9 @@ body {
     background: transparent;
     line-height: 1.65;
     margin: 0;
-    padding: 1.5rem 1.25rem
+    min-height: 100%;
+    min-height: max(100dvh, calc(100vw * 2450 / 1996));
+    padding: max(1.5rem, env(safe-area-inset-top)) max(1.25rem, env(safe-area-inset-right)) max(1.5rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left))
 }
 
 #main-wrapper {
@@ -219,7 +221,9 @@ body.is-section-focus #breadcrumb-nav {
 }
 
 @media (max-width: 600px) {
-    body { padding: 12px 8px }
+    body {
+        padding: max(12px, env(safe-area-inset-top)) max(8px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left))
+    }
     .header, #main { padding-left: 18px; padding-right: 18px }
     body.is-section-focus #breadcrumb-nav { padding-left: 18px; padding-right: 18px }
     .social-icons { padding: 0 18px }
