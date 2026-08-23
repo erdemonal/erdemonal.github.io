@@ -33,7 +33,7 @@
     <meta property="og:description" content="MSc Computer Science Student at Université Jean Monnet &amp; Mines Saint-Étienne" />
     <meta property="og:image" content="https://erdemonal.github.io/images/research-interests.webp" />
 
-    <link rel="stylesheet" href="styles.css?v=focus" />
+    <link rel="stylesheet" href="styles.css?v=trim" />
   </head>
     <body>
     
@@ -55,7 +55,7 @@
             <span class="semantic-id-label">
                 <a href="#0002" class="perm-link" title="Permalink to Contact Information">#0002</a>
             </span>
-            <div class="social-list contact-block" about="https://w3id.org/people/erdemonal/me" typeof="http://xmlns.com/foaf/0.1/Person">
+            <div class="contact-block" about="https://w3id.org/people/erdemonal/me" typeof="http://xmlns.com/foaf/0.1/Person">
                 <p>
                     <abbr title="World Wide Web, foaf:homepage: A homepage for some thing.">WWW</abbr>:
                     <a class="social-text-link" rel="http://xmlns.com/foaf/0.1/homepage noopener noreferrer" href="https://w3id.org/people/erdemonal" target="_blank">https://w3id.org/people/erdemonal</a>
