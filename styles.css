@@ -65,7 +65,8 @@
 html {
     min-height: 100%;
     min-height: 100dvh;
-    background-color: var(--archive)
+    background-color: var(--archive);
+    background: var(--archive) url(images/hugo-la-souris.webp) center / cover no-repeat
 }
 
 html::before {
@@ -76,6 +77,8 @@ html::before {
     bottom: 0;
     left: 0;
     z-index: 0;
+    height: 100vh;
+    height: 100dvh;
     background: url(images/hugo-la-souris.webp) center / cover no-repeat;
     pointer-events: none
 }
@@ -135,13 +138,13 @@ h1, h2, .project-title { text-align: left }
 
 .section { margin-bottom: 60px }
 #home-view .section:last-child { margin-bottom: 0 }
-.content-item:last-child { margin-bottom: 0 }
 
 .content-link, .social-text-link {
     font-family: var(--font-mono);
     font-size: .9em;
     color: var(--accent);
-    text-decoration: none
+    text-decoration: none;
+    overflow-wrap: anywhere
 }
 
 .perm-link {
@@ -180,7 +183,7 @@ abbr[title] {
 
 abbr { text-decoration: none; cursor: help }
 
-.content-item { margin-bottom: 2em }
+.content-item + .content-item { margin-top: 2em }
 .project-title {
     font-size: 1.175rem;
     font-weight: 700;
@@ -207,6 +210,12 @@ abbr { text-decoration: none; cursor: help }
 .publication-citation { margin-bottom: .5em }
 .publication-links .content-link,
 .project-links .content-link { margin-right: .75em }
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35em .75em
+}
+.project-links .content-link { margin-right: 0 }
 .bibtex-link { display: inline-block; vertical-align: middle; line-height: 0; text-decoration: none }
 .bibtex-link img { height: 1em; width: auto; display: block }
 a.bibtex-link:hover img { opacity: .75 }
@@ -234,14 +243,11 @@ a.bibtex-link:hover img { opacity: .75 }
 .accent-label { color: var(--accent); font-size: .95em; font-weight: 400 }
 .research-interests-caption .accent-label { margin-right: 4px }
 
-body.is-focus {
-    justify-content: safe center
-}
-body.is-focus #main { padding-bottom: 28px }
+body.is-focus #main { padding-bottom: 40px }
 body.is-focus .section { margin-bottom: 0 }
-body.is-focus .social-icons { margin-top: 28px; margin-bottom: 28px }
+body.is-focus .social-icons { margin-top: 28px; margin-bottom: 40px }
 body.is-section-focus #main { padding-top: 44px; padding-bottom: 40px }
-body.is-section-focus .header { padding-top: 44px; padding-bottom: 28px }
+body.is-section-focus .header { padding-top: 44px; padding-bottom: 40px }
 body.is-focus #breadcrumb-nav {
     display: flex;
     align-items: center;
@@ -274,4 +280,12 @@ body.is-section-focus #breadcrumb-nav {
     body.is-section-focus #breadcrumb-nav { padding-left: 18px; padding-right: 18px }
     .social-icons { padding: 0 18px }
     h1 { font-size: 1.85rem }
+    body.is-focus #breadcrumb-nav {
+        width: 100%;
+        left: 0;
+        transform: none;
+        box-sizing: border-box;
+        padding-left: 18px;
+        padding-right: 18px
+    }
 }

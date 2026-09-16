@@ -4,7 +4,8 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
     xmlns:foaf="http://xmlns.com/foaf/0.1/" 
     xmlns:dc="http://purl.org/dc/elements/1.1/"
-    exclude-result-prefixes="rdf foaf dc">
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    exclude-result-prefixes="rdf foaf dc xhtml">
     
 <xsl:output method="html" encoding="UTF-8" doctype-system="about:legacy-compat" indent="yes" />
 
@@ -31,9 +32,9 @@
     <meta property="og:url" content="https://erdemonal.github.io/" />
     <meta property="og:title" content="Erdem Önal" />
     <meta property="og:description" content="MSc Computer Science Student at Université Jean Monnet &amp; Mines Saint-Étienne" />
-    <meta property="og:image" content="https://erdemonal.github.io/images/research-interests.webp" />
+    <meta property="og:image" content="https://erdemonal.github.io/images/erdem-onal-knowledge-graph.svg" />
 
-    <link rel="stylesheet" href="styles.css?v=trim" />
+    <link rel="stylesheet" href="styles.css?v=mobi" />
   </head>
     <body>
     
@@ -47,7 +48,7 @@
                 <a href="#0001" class="perm-link" title="Permalink to Person Entity">#0001</a>
             </h1>
             <div class="intro">
-                <xsl:copy-of select="entity[@id='0001']/bio/node()"/>
+                <xsl:apply-templates select="entity[@id='0001']/bio/node()"/>
             </div>
         </header>
 
@@ -81,7 +82,7 @@
                     <p><xsl:value-of select="concept[@id='0003']/domains/intro"/></p>
                     <ul>
                         <xsl:for-each select="concept[@id='0003']/domains/topics/topic">
-                            <li><xsl:copy-of select="node()"/></li>
+                            <li><xsl:apply-templates select="node()"/></li>
                         </xsl:for-each>
                     </ul>
                 </div>
@@ -92,7 +93,7 @@
                         <xsl:attribute name="title"><xsl:value-of select="concept[@id='0003']/figure/title"/></xsl:attribute>
                     </img>
                     <figcaption class="research-interests-caption">
-                        <xsl:copy-of select="concept[@id='0003']/figure/caption/node()"/>
+                        <xsl:apply-templates select="concept[@id='0003']/figure/caption/node()"/>
                     </figcaption>
                 </figure>
             </div>
@@ -139,13 +140,13 @@
                             </xsl:when>
                             <xsl:otherwise>
                                 <div class="project-title">
-                                    <xsl:copy-of select="dc:title/node()"/>
+                                    <xsl:apply-templates select="dc:title/node()"/>
                                     <a class="perm-link">
                                         <xsl:attribute name="href">#<xsl:value-of select="@id"/></xsl:attribute>
                                         #<xsl:value-of select="@id"/>
                                     </a>
                                 </div>
-                                <div class="project-description"><xsl:copy-of select="dc:description/node()"/></div>
+                                <div class="project-description"><xsl:apply-templates select="dc:description/node()"/></div>
                                 <div class="project-links">
                                     <xsl:for-each select="links/link">
                                         <a class="content-link" target="_blank" rel="noopener noreferrer">
@@ -243,5 +244,16 @@
     </script>
   </body>
 </html>
+</xsl:template>
+
+<xsl:template match="xhtml:*">
+    <xsl:element name="{local-name()}">
+        <xsl:copy-of select="@*"/>
+        <xsl:apply-templates select="node()"/>
+    </xsl:element>
+</xsl:template>
+
+<xsl:template match="br">
+    <br/>
 </xsl:template>
 </xsl:stylesheet>

@@ -1,0 +1,27 @@
+name: Rebuild homepage
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - index.xml
+      - transform.xsl
+      - build.sh
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install xsltproc
+        run: sudo apt-get update && sudo apt-get install -y xsltproc
+      - name: Build index.html
+        run: chmod +x build.sh && ./build.sh
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Rebuild index.html from XML
+          file_pattern: index.html
