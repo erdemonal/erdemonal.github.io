@@ -104,7 +104,7 @@
         </item>
         <item id="p-004">
             <dc:title><xhtml:abbr title="Shapes Constraint Language">SHACL</xhtml:abbr> en Forme</dc:title>
-            <dc:description>Collection of <xhtml:abbr title="Shapes Constraint Language">SHACL</xhtml:abbr> shapes with their related ontologies, specifications, profiles, examples, and test files.</dc:description>
+            <dc:description>Analysis of <xhtml:abbr title="Shapes Constraint Language">SHACL</xhtml:abbr> usage in public GitHub repositories.</dc:description>
             <links>
                 <link>
                     <url>https://w3id.org/shacl-en-forme</url>
